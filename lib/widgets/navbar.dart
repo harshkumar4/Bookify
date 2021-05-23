@@ -38,10 +38,10 @@ class _NavBarState extends State<NavBar> {
           icon: const Icon(Icons.message_outlined),
         ),
         BottomNavigationBarItem(
-          activeIcon: const Icon(Icons.account_box),
+          activeIcon: const Icon(Icons.person),
           backgroundColor: Colors.red,
           label: 'Profile',
-          icon: const Icon(Icons.account_box_outlined),
+          icon: const Icon(Icons.person_outlined),
         ),
       ],
       backgroundColor: Color.fromRGBO(43, 43, 43, 1),

@@ -1,3 +1,5 @@
+import 'package:bookify_try/models/more.dart';
+import 'package:bookify_try/widgets/drawer.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/navbar.dart';
@@ -9,24 +11,43 @@ class HomeScreen extends StatefulWidget {
   _HomeScreenState createState() => _HomeScreenState();
 }
 
+var scaffoldKey = GlobalKey<ScaffoldState>();
+
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        drawer: Drawer(),
-        appBar: AppBar(
-          backgroundColor: Colors.black,
-          actions: [
-            Padding(
-              padding: const EdgeInsets.only(right: 12.0),
-              child: Image.asset(
-                'assets/logo.png',
-                height: 32,
-                width: 32,
+        drawer: MainDrawer(),
+        appBar: PreferredSize(
+          preferredSize: Size.fromHeight(60.0), // here the desired height
+          child: AppBar(
+            automaticallyImplyLeading: false,
+            backgroundColor: Colors.black,
+            title: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 0),
+              child: Builder(
+                builder: (context) => IconButton(
+                  icon: Image.asset(
+                    "assets/drawericon.png",
+                    height: 35,
+                    width: 50,
+                  ),
+                  onPressed: () => Scaffold.of(context).openDrawer(),
+                ),
               ),
-            )
-          ],
+            ),
+            actions: [
+              Padding(
+                padding: const EdgeInsets.only(right: 12.0),
+                child: Image.asset(
+                  'assets/logo.png',
+                  height: 30,
+                  width: 30,
+                ),
+              )
+            ],
+          ),
         ),
         bottomNavigationBar: NavBar(),
         body: SingleChildScrollView(
@@ -34,39 +55,76 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SizedBox(height: 4),
+              const SizedBox(height: 6),
               Text(
                 'Hi Guest!',
                 style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.w900,
-                    fontSize: 30),
+                    fontSize: 35),
               ),
               SizedBox(
                 height: 36,
                 child: Text(
                   'Let’s buy some new books!',
                   style: TextStyle(
-                      color: Color.fromRGBO(192, 192, 192, 1),
-                      fontWeight: FontWeight.w700),
+                    color: Colors.white,
+                    fontWeight: FontWeight.w700,
+                    fontSize: 20,
+                  ),
                 ),
+              ),
+              Divider(
+                height: 4,
+                color: Color(0xFFFFFF00),
+                thickness: 5,
+                endIndent: 280,
+              ),
+              SizedBox(
+                height: 20,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    'Self Help',
+                    'Psychology',
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 20,
                         fontWeight: FontWeight.bold),
                   ),
                   TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => More()));
+                      },
                       child: Text(
                         'More > ',
-                        style: TextStyle(color: Colors.yellow),
+                        style: TextStyle(color: Color(0xFFFFFF00)),
                       )),
+                ],
+              ),
+              ItemsListWid(),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Action and Adventure',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      'More > ',
+                      style: TextStyle(
+                        color: Color(0xFFFFFF00),
+                      ),
+                    ),
+                  ),
                 ],
               ),
               ItemsListWid(),
@@ -85,7 +143,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     onPressed: () {},
                     child: Text(
                       'More > ',
-                      style: TextStyle(color: Colors.yellow),
+                      style: TextStyle(
+                        color: Color(0xFFFFFF00),
+                      ),
                     ),
                   ),
                 ],
@@ -95,7 +155,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    'Space and Technology',
+                    'Sci-Fi',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
@@ -106,7 +166,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     onPressed: () {},
                     child: Text(
                       'More > ',
-                      style: TextStyle(color: Colors.yellow),
+                      style: TextStyle(
+                        color: Color(0xFFFFFF00),
+                      ),
                     ),
                   ),
                 ],
@@ -116,7 +178,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    'Trading',
+                    'Biographies',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
@@ -127,7 +189,32 @@ class _HomeScreenState extends State<HomeScreen> {
                     onPressed: () {},
                     child: Text(
                       'More > ',
-                      style: TextStyle(color: Colors.yellow),
+                      style: TextStyle(
+                        color: Color(0xFFFFFF00),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              ItemsListWid(),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Startups',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      'More > ',
+                      style: TextStyle(
+                        color: Color(0xFFFFFF00),
+                      ),
                     ),
                   ),
                 ],
