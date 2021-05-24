@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 class NavBar extends StatefulWidget {
+  final Function screenNavigate;
+
+  NavBar(this.screenNavigate);
+
   @override
   _NavBarState createState() => _NavBarState();
 }
@@ -13,7 +17,10 @@ class _NavBarState extends State<NavBar> {
       currentIndex: index,
       selectedItemColor: Colors.yellow,
       unselectedItemColor: Color.fromRGBO(192, 192, 192, 1),
-      onTap: (value) => setState(() => index = value),
+      onTap: (int value) {
+        widget.screenNavigate(value);
+        setState(() => index = value);
+      },
       items: [
         _navItem(
           'Home',
@@ -37,8 +44,8 @@ class _NavBarState extends State<NavBar> {
         ),
         _navItem(
           'Profile',
-          Icon(Icons.account_box),
-          Icon(Icons.account_box_outlined),
+          Icon(Icons.person),
+          Icon(Icons.person),
         ),
       ],
       backgroundColor: Color.fromRGBO(43, 43, 43, 1),

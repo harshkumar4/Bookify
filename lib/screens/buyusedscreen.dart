@@ -1,48 +1,18 @@
 import 'package:flutter/material.dart';
 
-class MoreScreen extends StatefulWidget {
-  final routeName = '/mo rescreen';
-
-  @override
-  _MoreScreenState createState() => _MoreScreenState();
-}
-
-class _MoreScreenState extends State<MoreScreen> {
-  String title;
-  @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-    title = ModalRoute.of(context).settings.arguments;
-  }
+class BuyUsedScreen extends StatelessWidget {
+  const BuyUsedScreen({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.black,
-        leading: IconButton(
-          icon: Icon(
-            Icons.arrow_back_sharp,
-            size: 30,
-            color: Colors.white,
-          ),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
-      ),
-      body: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        padding: EdgeInsets.only(left: 18),
+    return SingleChildScrollView(
+        padding: EdgeInsets.only(left: 20),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           const SizedBox(height: 6),
           Text(
-            title,
+            'Used Books',
             style: TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.w900,
-              fontSize: 35,
-            ),
+                color: Colors.white, fontWeight: FontWeight.w900, fontSize: 35),
           ),
           const SizedBox(height: 14),
           Card(
@@ -76,8 +46,6 @@ class _MoreScreenState extends State<MoreScreen> {
               ),
             ),
           ),
-        ]),
-      ),
-    );
+        ]));
   }
 }

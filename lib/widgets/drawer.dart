@@ -11,77 +11,26 @@ class MainDrawer extends StatelessWidget {
           child: Column(mainAxisSize: MainAxisSize.max, children: <Widget>[
             Padding(
               padding: const EdgeInsets.only(
-                  top: 40.0, bottom: 40, left: 10, right: 10),
-              child: Text(
-                "Bookify",
-                style: TextStyle(
-                    fontSize: 40,
-                    fontWeight: FontWeight.w900,
-                    color: Color(0xFFFFFFFF)),
+                  top: 35.0, bottom: 35.0, left: 10, right: 10),
+              child: Container(
+                child: Text(
+                  "Bookify",
+                  style: TextStyle(
+                      fontSize: 40,
+                      fontWeight: FontWeight.w900,
+                      color: Color(0xFFFFFFFF)),
+                ),
               ),
             ),
             Divider(
               color: Color(0xFF000000),
               thickness: 2,
             ),
-            ListTile(
-              leading: Icon(
-                Icons.person,
-                color: Color(0xFFC4C4C4),
-              ),
-              title: Text(
-                "View profile",
-                style: TextStyle(
-                    fontSize: 15,
-                    fontWeight: FontWeight.w300,
-                    color: Color(0xFFC4C4C4)),
-              ),
-              onTap: () {},
-            ),
-            ListTile(
-              leading: Icon(Icons.book, color: Color(0xFFC4C4C4)),
-              title: Text(
-                "About us",
-                style: TextStyle(
-                    fontSize: 15,
-                    fontWeight: FontWeight.w300,
-                    color: Color(0xFFC4C4C4)),
-              ),
-              onTap: () {},
-            ),
-            ListTile(
-              leading: Icon(Icons.favorite, color: Color(0xFFC4C4C4)),
-              title: Text(
-                "Rate on Play Store",
-                style: TextStyle(
-                    fontSize: 15,
-                    fontWeight: FontWeight.w300,
-                    color: Color(0xFFC4C4C4)),
-              ),
-              onTap: () {},
-            ),
-            ListTile(
-              leading: Icon(Icons.adb, color: Color(0xFFC4C4C4)),
-              title: Text(
-                "Report Bugs",
-                style: TextStyle(
-                    fontSize: 15,
-                    fontWeight: FontWeight.w300,
-                    color: Color(0xFFC4C4C4)),
-              ),
-              onTap: () {},
-            ),
-            ListTile(
-              leading: Icon(Icons.share, color: Color(0xFFC4C4C4)),
-              title: Text(
-                "Invite Friends",
-                style: TextStyle(
-                    fontSize: 15,
-                    fontWeight: FontWeight.w300,
-                    color: Color(0xFFC4C4C4)),
-              ),
-              onTap: () {},
-            ),
+            _listItems(Icons.person, 'View Profile'),
+            _listItems(Icons.book, 'About Us'),
+            _listItems(Icons.favorite, 'Rate on Play Store'),
+            _listItems(Icons.adb, 'Report Bugs'),
+            _listItems(Icons.share, 'Invite Friends'),
             SizedBox(
               height: 240,
             ),
@@ -93,7 +42,7 @@ class MainDrawer extends StatelessWidget {
                   "Connect with us",
                   style: TextStyle(
                     fontSize: 15,
-                    fontWeight: FontWeight.w500,
+                    fontWeight: FontWeight.w700,
                     color: Color(0xFFFFFFFF),
                   ),
                 ),
@@ -103,43 +52,34 @@ class MainDrawer extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.all(6),
-                  child: IconButton(
-                      icon: FaIcon(
-                        FontAwesomeIcons.linkedin,
-                        size: 30,
-                        color: new Color(0xFFFFFF00),
-                      ),
-                      onPressed: () {}),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(6),
-                  child: IconButton(
-                      iconSize: 30,
-                      icon: FaIcon(FontAwesomeIcons.instagramSquare),
-                      color: new Color(0xFFFFFF00),
-                      onPressed: () {}),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(6),
-                  child: IconButton(
-                      iconSize: 30,
-                      icon: FaIcon(FontAwesomeIcons.twitterSquare),
-                      color: new Color(0xFFFFFF00),
-                      onPressed: () {}),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(6),
-                  child: IconButton(
-                      iconSize: 30,
-                      icon: FaIcon(FontAwesomeIcons.language),
-                      color: new Color(0xFFFFFF00),
-                      onPressed: () {}),
-                ),
+                _iconButton(FaIcon(FontAwesomeIcons.linkedin)),
+                _iconButton(FaIcon(FontAwesomeIcons.instagram)),
+                _iconButton(FaIcon(FontAwesomeIcons.twitter)),
+                _iconButton(FaIcon(FontAwesomeIcons.globe)),
               ],
             ),
           ])),
     ));
   }
 }
+
+Widget _iconButton(Widget icon) => Padding(
+      padding: const EdgeInsets.all(6),
+      child: IconButton(
+          iconSize: 25,
+          icon: icon,
+          color: new Color(0xFFFFFF00),
+          onPressed: () {}),
+    );
+
+Widget _listItems(IconData icon, String title) => ListTile(
+      leading: Icon(icon, color: Color(0xFFC4C4C4)),
+      title: Text(
+        title,
+        style: TextStyle(
+            fontSize: 15,
+            fontWeight: FontWeight.w300,
+            color: Color(0xFFC4C4C4)),
+      ),
+      onTap: () {},
+    );

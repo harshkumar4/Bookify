@@ -1,4 +1,4 @@
-import 'package:bookify_try/screens/homescreen.dart';
+import 'package:bookify_try/screens/screencontroller.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/authinputfield.dart';
@@ -49,7 +49,7 @@ class LoginScreen extends StatelessWidget {
                       style:
                           TextStyle(fontWeight: FontWeight.w900, fontSize: 17)),
                   onPressed: () {
-                    Navigator.of(context).pushNamed(HomeScreen().routeName);
+                    // Navigator.of(context).pushNamed(HomeScreen().routeName);
                   },
                 ),
                 const SizedBox(height: 8),

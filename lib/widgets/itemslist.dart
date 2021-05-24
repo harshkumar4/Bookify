@@ -4,7 +4,7 @@ class ItemsListWid extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 180,
+      height: 190,
       child: ListView.builder(
         clipBehavior: Clip.none,
         itemCount: 6,
