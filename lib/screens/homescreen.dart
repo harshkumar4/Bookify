@@ -1,15 +1,18 @@
-import 'package:bookify_try/widgets/appbar.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/navbar.dart';
 import '../widgets/itemslist.dart';
 import '../widgets/appbar.dart';
 
+import '../models/more.dart';
+
 class HomeScreen extends StatefulWidget {
   final routeName = '/homescreen';
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
+
+var scaffoldKey = GlobalKey<ScaffoldState>();
 
 class _HomeScreenState extends State<HomeScreen> {
   @override
@@ -24,39 +27,76 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SizedBox(height: 4),
+              const SizedBox(height: 6),
               Text(
                 'Hi Guest!',
                 style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.w900,
-                    fontSize: 30),
+                    fontSize: 35),
               ),
               SizedBox(
                 height: 36,
                 child: Text(
                   'Let’s buy some new books!',
                   style: TextStyle(
-                      color: Color.fromRGBO(192, 192, 192, 1),
-                      fontWeight: FontWeight.w700),
+                    color: Colors.white,
+                    fontWeight: FontWeight.w700,
+                    fontSize: 20,
+                  ),
                 ),
+              ),
+              Divider(
+                height: 4,
+                color: Color(0xFFFFFF00),
+                thickness: 5,
+                endIndent: 280,
+              ),
+              SizedBox(
+                height: 20,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    'Self Help',
+                    'Psychology',
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 20,
                         fontWeight: FontWeight.bold),
                   ),
                   TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => More()));
+                      },
                       child: Text(
                         'More > ',
-                        style: TextStyle(color: Colors.yellow),
+                        style: TextStyle(color: Color(0xFFFFFF00)),
                       )),
+                ],
+              ),
+              ItemsListWid(),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Action and Adventure',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      'More > ',
+                      style: TextStyle(
+                        color: Color(0xFFFFFF00),
+                      ),
+                    ),
+                  ),
                 ],
               ),
               ItemsListWid(),
@@ -75,7 +115,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     onPressed: () {},
                     child: Text(
                       'More > ',
-                      style: TextStyle(color: Colors.yellow),
+                      style: TextStyle(
+                        color: Color(0xFFFFFF00),
+                      ),
                     ),
                   ),
                 ],
@@ -85,7 +127,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    'Space and Technology',
+                    'Sci-Fi',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
@@ -96,7 +138,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     onPressed: () {},
                     child: Text(
                       'More > ',
-                      style: TextStyle(color: Colors.yellow),
+                      style: TextStyle(
+                        color: Color(0xFFFFFF00),
+                      ),
                     ),
                   ),
                 ],
@@ -106,7 +150,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    'Trading',
+                    'Biographies',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
@@ -117,7 +161,32 @@ class _HomeScreenState extends State<HomeScreen> {
                     onPressed: () {},
                     child: Text(
                       'More > ',
-                      style: TextStyle(color: Colors.yellow),
+                      style: TextStyle(
+                        color: Color(0xFFFFFF00),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              ItemsListWid(),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Startups',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      'More > ',
+                      style: TextStyle(
+                        color: Color(0xFFFFFF00),
+                      ),
                     ),
                   ),
                 ],
