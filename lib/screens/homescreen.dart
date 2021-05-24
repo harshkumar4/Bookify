@@ -1,7 +1,9 @@
+import 'package:bookify_try/widgets/appbar.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/navbar.dart';
 import '../widgets/itemslist.dart';
+import '../widgets/appbar.dart';
 
 class HomeScreen extends StatefulWidget {
   final routeName = '/homescreen';
@@ -15,19 +17,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return SafeArea(
       child: Scaffold(
         drawer: Drawer(),
-        appBar: AppBar(
-          backgroundColor: Colors.black,
-          actions: [
-            Padding(
-              padding: const EdgeInsets.only(right: 12.0),
-              child: Image.asset(
-                'assets/logo.png',
-                height: 32,
-                width: 32,
-              ),
-            )
-          ],
-        ),
+        appBar: MyAppbar(),
         bottomNavigationBar: NavBar(),
         body: SingleChildScrollView(
           padding: EdgeInsets.only(left: 18),
