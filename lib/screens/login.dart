@@ -1,12 +1,15 @@
 import 'package:bookify_try/screens/homescreen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+
+import '../widgets/authinputfield.dart';
 
 class LoginScreen extends StatelessWidget {
   final routeName = '/login';
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
+    final screenHeight = MediaQuery.of(context).size.height -
+        (MediaQuery.of(context).padding.top +
+            MediaQuery.of(context).padding.bottom);
     return SafeArea(
       child: GestureDetector(
         onTap: () => FocusScope.of(context).unfocus(),
@@ -17,7 +20,7 @@ class LoginScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(height: size.height * 0.09),
+                SizedBox(height: screenHeight * 0.07),
                 const Text(
                   'Log In',
                   style: TextStyle(
@@ -25,11 +28,11 @@ class LoginScreen extends StatelessWidget {
                       fontSize: 30,
                       fontWeight: FontWeight.w900),
                 ),
-                const SizedBox(height: 30),
-                _textField('Email', TextInputType.emailAddress),
-                const SizedBox(height: 25),
-                _textField('Password', TextInputType.visiblePassword),
-                const SizedBox(height: 22),
+                SizedBox(height: screenHeight * 0.03),
+                textField('Email', TextInputType.emailAddress),
+                SizedBox(height: screenHeight * 0.02),
+                textField('Password', TextInputType.visiblePassword, true),
+                SizedBox(height: screenHeight * 0.03),
                 ElevatedButton(
                   style: ButtonStyle(
                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
@@ -62,7 +65,7 @@ class LoginScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(height: size.height * 0.32),
+                SizedBox(height: screenHeight * 0.3),
                 _loginButton(),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -114,44 +117,4 @@ Widget _loginButton() => ElevatedButton.icon(
         style: TextStyle(fontWeight: FontWeight.w900, fontSize: 17),
       ),
       onPressed: () {},
-    );
-
-Widget _textField(String label, TextInputType keyboard) => TextFormField(
-      inputFormatters: [
-        FilteringTextInputFormatter.deny(RegExp(r'[ ]')),
-      ],
-      style: const TextStyle(color: Colors.yellowAccent, fontSize: 18),
-      keyboardType: keyboard,
-      cursorColor: Colors.yellowAccent,
-      cursorHeight: 23,
-      decoration: InputDecoration(
-        focusedErrorBorder: const OutlineInputBorder(
-          borderSide: const BorderSide(color: Colors.redAccent, width: 2),
-        ),
-        labelText: label,
-        labelStyle: const TextStyle(
-          color: Colors.yellow,
-          fontWeight: FontWeight.bold,
-          letterSpacing: 0.5,
-        ),
-        enabledBorder: const OutlineInputBorder(
-          borderSide: const BorderSide(
-            color: Colors.white,
-            width: 2,
-          ),
-          borderRadius: const BorderRadius.all(
-            Radius.circular(20),
-          ),
-        ),
-        focusedBorder: const OutlineInputBorder(
-          borderSide: BorderSide(
-            color: Colors.white,
-            width: 2,
-          ),
-          borderRadius: const BorderRadius.all(
-            Radius.circular(20),
-          ),
-        ),
-        border: const UnderlineInputBorder(borderSide: BorderSide.none),
-      ),
     );

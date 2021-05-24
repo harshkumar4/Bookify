@@ -7,8 +7,6 @@ class MyAppbar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      // color: Colors.white,
-      // height: 150,
       padding: EdgeInsets.only(top: 8),
       child: AppBar(
         backgroundColor: Colors.black,

@@ -4,7 +4,7 @@ import '../widgets/navbar.dart';
 import '../widgets/itemslist.dart';
 import '../widgets/appbar.dart';
 
-import '../models/more.dart';
+import './morescreen.dart';
 
 class HomeScreen extends StatefulWidget {
   final routeName = '/homescreen';
@@ -67,8 +67,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   TextButton(
                       onPressed: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => More()));
+                        Navigator.of(context).pushNamed(MoreScreen().routeName,
+                            arguments: 'Psychology');
                       },
                       child: Text(
                         'More > ',

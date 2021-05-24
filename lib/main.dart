@@ -1,3 +1,4 @@
+import 'package:bookify_try/screens/morescreen.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 
@@ -26,13 +27,14 @@ class MyApp extends StatelessWidget {
         splashIconSize: double.infinity,
         splash: 'assets/splashscreenicon.png',
         nextScreen: SignUpScreen(),
-        duration: 500,
+        duration: 100,
         backgroundColor: Colors.black,
         splashTransition: SplashTransition.fadeTransition,
       ),
       routes: {
         LoginScreen().routeName: (context) => LoginScreen(),
         HomeScreen().routeName: (context) => HomeScreen(),
+        MoreScreen().routeName: (context) => MoreScreen(),
       },
     );
   }

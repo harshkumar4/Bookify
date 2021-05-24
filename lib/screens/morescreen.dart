@@ -1,11 +1,20 @@
 import 'package:flutter/material.dart';
 
-class More extends StatefulWidget {
+class MoreScreen extends StatefulWidget {
+  final routeName = '/mo rescreen';
+
   @override
-  _MoreState createState() => _MoreState();
+  _MoreScreenState createState() => _MoreScreenState();
 }
 
-class _MoreState extends State<More> {
+class _MoreScreenState extends State<MoreScreen> {
+  String title;
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    title = ModalRoute.of(context).settings.arguments;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,13 +37,14 @@ class _MoreState extends State<More> {
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           const SizedBox(height: 6),
           Text(
-            'Psychology',
+            title,
             style: TextStyle(
-                color: Colors.white, fontWeight: FontWeight.w900, fontSize: 35),
+              color: Colors.white,
+              fontWeight: FontWeight.w900,
+              fontSize: 35,
+            ),
           ),
-          Padding(
-            padding: EdgeInsets.all(10),
-          ),
+          const SizedBox(height: 14),
           Card(
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(5),
@@ -49,19 +59,19 @@ class _MoreState extends State<More> {
                 children: <Widget>[
                   Padding(
                     padding: EdgeInsets.only(left: 10),
+                    child: Icon(
+                      Icons.search,
+                      size: 30,
+                      color: Colors.black,
+                    ),
                   ),
-                  Icon(
-                    Icons.search,
-                    size: 30,
-                    color: Colors.black,
+                  const SizedBox(width: 10),
+                  Text(
+                    "Search any book...",
+                    style: TextStyle(
+                      color: Colors.black,
+                    ),
                   ),
-                  Padding(
-                    padding: EdgeInsets.all(5),
-                  ),
-                  Text("Search any book...",
-                      style: TextStyle(
-                        color: Colors.black,
-                      ))
                 ],
               ),
             ),

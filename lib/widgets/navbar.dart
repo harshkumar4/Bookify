@@ -51,6 +51,6 @@ BottomNavigationBarItem _navItem(
         String label, Icon activeIcon, Icon inactiveicon) =>
     BottomNavigationBarItem(
       activeIcon: activeIcon,
-      label: 'Home',
+      label: label,
       icon: inactiveicon,
     );
