@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../widgets/navbar.dart';
 import '../widgets/itemslist.dart';
 import '../widgets/appbar.dart';
+import '../widgets/drawer.dart';
 
 import './morescreen.dart';
 
@@ -19,7 +20,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        drawer: Drawer(),
+        drawer: MainDrawer(),
         appBar: MyAppbar(),
         bottomNavigationBar: NavBar(),
         body: SingleChildScrollView(
