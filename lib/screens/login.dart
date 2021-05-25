@@ -1,4 +1,5 @@
-import 'package:bookify_try/screens/homescreen.dart';
+import 'package:bookify_try/screens/screencontroller.dart';
+import 'package:bookify_try/sizeconfig.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/authinputfield.dart';
@@ -7,9 +8,6 @@ class LoginScreen extends StatelessWidget {
   final routeName = '/login';
   @override
   Widget build(BuildContext context) {
-    final screenHeight = MediaQuery.of(context).size.height -
-        (MediaQuery.of(context).padding.top +
-            MediaQuery.of(context).padding.bottom);
     return SafeArea(
       child: GestureDetector(
         onTap: () => FocusScope.of(context).unfocus(),
@@ -20,7 +18,7 @@ class LoginScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(height: screenHeight * 0.07),
+                SizedBox(height: getRelativeHeight(0.07)),
                 const Text(
                   'Log In',
                   style: TextStyle(
@@ -28,11 +26,11 @@ class LoginScreen extends StatelessWidget {
                       fontSize: 30,
                       fontWeight: FontWeight.w900),
                 ),
-                SizedBox(height: screenHeight * 0.03),
+                SizedBox(height: getRelativeHeight(0.03)),
                 textField('Email', TextInputType.emailAddress),
-                SizedBox(height: screenHeight * 0.02),
+                SizedBox(height: getRelativeHeight(0.02)),
                 textField('Password', TextInputType.visiblePassword, true),
-                SizedBox(height: screenHeight * 0.03),
+                SizedBox(height: getRelativeHeight(0.03)),
                 ElevatedButton(
                   style: ButtonStyle(
                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
@@ -49,7 +47,7 @@ class LoginScreen extends StatelessWidget {
                       style:
                           TextStyle(fontWeight: FontWeight.w900, fontSize: 17)),
                   onPressed: () {
-                    Navigator.of(context).pushNamed(HomeScreen().routeName);
+                    // Navigator.of(context).pushNamed(HomeScreen().routeName);
                   },
                 ),
                 const SizedBox(height: 8),
@@ -65,7 +63,7 @@ class LoginScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(height: screenHeight * 0.3),
+                SizedBox(height: getRelativeHeight(0.3)),
                 _loginButton(),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,

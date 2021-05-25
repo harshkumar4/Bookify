@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/verticalListItem.dart';
+
 class MoreScreen extends StatefulWidget {
-  final routeName = '/mo rescreen';
+  final routeName = '/morescreen';
 
   @override
   _MoreScreenState createState() => _MoreScreenState();
@@ -17,66 +19,71 @@ class _MoreScreenState extends State<MoreScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.black,
-        leading: IconButton(
-          icon: Icon(
-            Icons.arrow_back_sharp,
-            size: 30,
-            color: Colors.white,
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.black,
+          leading: IconButton(
+            icon: Icon(
+              Icons.arrow_back_sharp,
+              size: 30,
+              color: Colors.white,
+            ),
+            onPressed: () {
+              Navigator.pop(context);
+            },
           ),
-          onPressed: () {
-            Navigator.pop(context);
-          },
         ),
-      ),
-      body: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        padding: EdgeInsets.only(left: 18),
-        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          const SizedBox(height: 6),
-          Text(
-            title,
-            style: TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.w900,
-              fontSize: 35,
-            ),
-          ),
-          const SizedBox(height: 14),
-          Card(
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(5),
-            ),
-            clipBehavior: Clip.antiAlias,
-            child: Container(
-              height: 50,
-              width: 350,
-              color: Colors.white,
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  Padding(
-                    padding: EdgeInsets.only(left: 10),
-                    child: Icon(
-                      Icons.search,
-                      size: 30,
-                      color: Colors.black,
-                    ),
-                  ),
-                  const SizedBox(width: 10),
-                  Text(
-                    "Search any book...",
-                    style: TextStyle(
-                      color: Colors.black,
-                    ),
-                  ),
-                ],
+        body: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 18),
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const SizedBox(height: 6),
+              Text(
+                title,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w900,
+                  fontSize: 35,
+                ),
               ),
-            ),
+              const SizedBox(height: 14),
+              Card(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(5),
+                ),
+                clipBehavior: Clip.antiAlias,
+                child: Container(
+                  height: 50,
+                  color: Colors.white,
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 10),
+                        child: Icon(
+                          Icons.search,
+                          size: 30,
+                          color: Colors.black,
+                        ),
+                      ),
+                      Text(
+                        "Search any book...",
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              SizedBox(height: 10),
+              VertListItem(),
+            ],
           ),
-        ]),
+        ),
       ),
     );
   }

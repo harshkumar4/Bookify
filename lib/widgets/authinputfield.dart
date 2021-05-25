@@ -18,6 +18,7 @@ Widget textField(String label, TextInputType keyboard,
         Container(
           height: 50,
           child: TextFormField(
+            textAlignVertical: TextAlignVertical.center,
             obscureText: hiddenText,
             style: const TextStyle(color: Colors.yellowAccent, fontSize: 18),
             keyboardType: keyboard,
@@ -27,9 +28,9 @@ Widget textField(String label, TextInputType keyboard,
               FilteringTextInputFormatter.deny(RegExp(r'[ ]')),
             ],
             decoration: InputDecoration(
-              contentPadding: EdgeInsets.symmetric(
-                vertical: 2,
-                horizontal: 8,
+              contentPadding: EdgeInsets.only(
+                // vertical: 2,
+                left: 12,
               ),
               focusedErrorBorder: const OutlineInputBorder(
                 borderSide: const BorderSide(color: Colors.redAccent, width: 2),

@@ -1,15 +1,14 @@
-import 'package:bookify_try/screens/login.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import '../sizeconfig.dart';
+
 import '../widgets/authinputfield.dart';
+import 'package:bookify_try/screens/login.dart';
 
 class SignUpScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final screenHeight = MediaQuery.of(context).size.height -
-        (MediaQuery.of(context).padding.top +
-            MediaQuery.of(context).padding.bottom);
     return SafeArea(
       child: GestureDetector(
         onTap: () => FocusScope.of(context).unfocus(),
@@ -20,7 +19,7 @@ class SignUpScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(height: screenHeight * 0.07),
+                SizedBox(height: getRelativeHeight(0.07)),
                 const Text(
                   'Create Account',
                   style: TextStyle(
@@ -28,13 +27,13 @@ class SignUpScreen extends StatelessWidget {
                       fontSize: 30,
                       fontWeight: FontWeight.w900),
                 ),
-                SizedBox(height: screenHeight * 0.03),
+                SizedBox(height: getRelativeHeight(0.03)),
                 textField('First Name', TextInputType.text),
-                SizedBox(height: screenHeight * 0.02),
+                SizedBox(height: getRelativeHeight(0.02)),
                 textField('Email', TextInputType.emailAddress),
-                SizedBox(height: screenHeight * 0.02),
+                SizedBox(height: getRelativeHeight(0.02)),
                 textField('Password', TextInputType.visiblePassword, true),
-                SizedBox(height: screenHeight * 0.03),
+                SizedBox(height: getRelativeHeight(0.03)),
                 ElevatedButton(
                   style: ButtonStyle(
                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
@@ -54,7 +53,7 @@ class SignUpScreen extends StatelessWidget {
                     Navigator.of(context).pushNamed(LoginScreen().routeName);
                   },
                 ),
-                SizedBox(height: screenHeight * 0.22),
+                SizedBox(height: getRelativeHeight(0.22)),
                 _signUpButton(),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,

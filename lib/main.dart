@@ -1,11 +1,13 @@
-import 'package:bookify_try/screens/morescreen.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 
-import 'package:bookify_try/screens/homescreen.dart';
-import 'package:bookify_try/screens/login.dart';
-import 'package:bookify_try/screens/signup.dart';
-import 'package:google_fonts/google_fonts.dart';
+import './sizeconfig.dart';
+
+import './screens/morescreen.dart';
+import './screens/screencontroller.dart';
+import './screens/signup.dart';
+import './screens/login.dart';
 
 void main() {
   runApp(MyApp());
@@ -23,17 +25,21 @@ class MyApp extends StatelessWidget {
           Theme.of(context).textTheme,
         ),
       ),
-      home: AnimatedSplashScreen(
-        splashIconSize: double.infinity,
-        splash: 'assets/splashscreenicon.png',
-        nextScreen: SignUpScreen(),
-        duration: 100,
-        backgroundColor: Colors.black,
-        splashTransition: SplashTransition.fadeTransition,
+      home: Builder(
+        builder: (BuildContext context) {
+          ScreenSize.intialize(context);
+          return AnimatedSplashScreen(
+            splashIconSize: double.infinity,
+            splash: 'assets/splashscreenicon.png',
+            nextScreen: ScreenController(),
+            duration: 100,
+            backgroundColor: Colors.black,
+            splashTransition: SplashTransition.fadeTransition,
+          );
+        },
       ),
       routes: {
         LoginScreen().routeName: (context) => LoginScreen(),
-        HomeScreen().routeName: (context) => HomeScreen(),
         MoreScreen().routeName: (context) => MoreScreen(),
       },
     );
