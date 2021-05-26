@@ -57,15 +57,17 @@ class GridList extends StatelessWidget {
             Positioned(
               child: Material(
                 child: Padding(
-                  padding: const EdgeInsets.only(left: 2.0),
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 2.0, horizontal: 4),
                   child: Text(
                     'Rs 200',
                     style: TextStyle(
+                      fontWeight: FontWeight.bold,
                       color: Colors.black,
                     ),
                   ),
                 ),
-                color: Colors.yellow,
+                color: Color(0xFFFFFF00),
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(2),
                 ),

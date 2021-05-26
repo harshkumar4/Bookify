@@ -14,12 +14,6 @@ class MainDrawer extends StatelessWidget {
             mainAxisSize: MainAxisSize.max,
             children: <Widget>[
               Container(
-                // padding: const EdgeInsets.only(
-                //   top: 35.0,
-                //   bottom: 35.0,
-                //   left: 10,
-                //   right: 10,
-                // ),
                 height: getRelativeHeight(0.185),
                 child: Center(
                   child: Row(

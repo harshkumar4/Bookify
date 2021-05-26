@@ -53,7 +53,7 @@ class VertListItem extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Text(
-                      'Title of the product ash asih fk askhkjas hkh',
+                      'Title of the product ash asih fkk',
                       softWrap: true,
                       maxLines: 1,
                       overflow: TextOverflow.clip,
@@ -64,7 +64,7 @@ class VertListItem extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      'JK Rollen',
+                      'Robert Kiyosaki',
                       softWrap: true,
                       maxLines: 1,
                       overflow: TextOverflow.clip,
