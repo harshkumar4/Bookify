@@ -1,3 +1,4 @@
+import 'package:bookify_try/sizeconfig.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/gridList.dart';
@@ -16,7 +17,10 @@ class BuyUsedScreen extends StatelessWidget {
           const Text(
             'Used Books',
             style: TextStyle(
-                color: Colors.white, fontWeight: FontWeight.w900, fontSize: 35),
+              color: Colors.white,
+              fontWeight: FontWeight.w900,
+              fontSize: 35,
+            ),
           ),
           const SizedBox(height: 14),
           Card(
@@ -26,7 +30,6 @@ class BuyUsedScreen extends StatelessWidget {
             clipBehavior: Clip.antiAlias,
             child: Container(
               height: 50,
-              width: 380,
               color: Colors.white,
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,

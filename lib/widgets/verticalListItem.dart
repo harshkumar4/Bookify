@@ -6,7 +6,7 @@ class VertListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: getRelativeHeight(0.75),
+      height: getRelativeHeight(0.72),
       child: ListView.builder(
         itemCount: 20,
         itemBuilder: (context, index) => Container(

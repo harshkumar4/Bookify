@@ -8,80 +8,74 @@ class GridList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        padding: EdgeInsets.only(top: 10),
-        height: getRelativeHeight(0.80),
-        width: 180,
-        child: ListView.builder(
-          itemCount: 10,
-          itemBuilder: (context, i) {
-            return Container(
-              color: Colors.white,
-              margin: EdgeInsets.all(10),
-              height: 220,
-              width: 100,
+      height: getRelativeHeight(0.64),
+      padding: EdgeInsets.only(top: 8),
+      child: GridView.builder(
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
+          crossAxisSpacing: 18,
+          mainAxisSpacing: 12,
+          childAspectRatio: 0.8,
+        ),
+        itemCount: 10,
+        itemBuilder: (ctx, i) => Stack(
+          children: [
+            Container(
+              padding: EdgeInsets.all(6),
+              decoration: BoxDecoration(
+                border: Border.all(
+                  width: 2,
+                  color: Colors.white,
+                ),
+                borderRadius: BorderRadius.circular(4),
+              ),
               child: Column(
                 children: [
-                  Stack(
-                    children: [
-                      Container(
-                        padding: EdgeInsets.all(1),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(8),
-                          // color: Colors.red,
-                          border: Border.all(
-                            color: Colors.white,
-                            width: 2,
-                          ),
-                        ),
-                        // height: 10,
-                        // width: 10,
-
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(4),
-                          child: Image.asset(
-                            'assets/rdpd.JPG',
-                            height: 100,
-                            width: 100,
-                            fit: BoxFit.fill,
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        bottom: 0,
-                        right: 0,
-                        child: Material(
-                          color: Color(0xFFFFFF00),
-                          borderRadius: BorderRadius.only(
-                            bottomRight: Radius.circular(4),
-                            topLeft: Radius.circular(4),
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.symmetric(
-                                vertical: 2.0, horizontal: 4),
-                            child: Text(
-                              'Rs. 200',
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
+                  ClipRRect(
+                    child: Image.asset(
+                      'assets/rdpd.JPG',
+                      height: 120,
+                      width: double.infinity,
+                    ),
+                    borderRadius: BorderRadius.circular(20),
                   ),
-                  SizedBox(height: 8),
+                  SizedBox(height: 4),
                   Text(
-                    'Title of the product',
-                    maxLines: 2,
+                    'Rich Dad Poor Dad',
                     softWrap: true,
+                    maxLines: 2,
                     overflow: TextOverflow.clip,
                     style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
                       color: Colors.white,
-                      fontWeight: FontWeight.w700,
                     ),
                   ),
                 ],
               ),
-            );
-          },
-        ));
+            ),
+            Positioned(
+              child: Material(
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 2.0),
+                  child: Text(
+                    'Rs 200',
+                    style: TextStyle(
+                      color: Colors.black,
+                    ),
+                  ),
+                ),
+                color: Colors.yellow,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(2),
+                ),
+              ),
+              bottom: 2,
+              right: 2,
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
