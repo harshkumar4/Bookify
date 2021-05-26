@@ -29,7 +29,7 @@ class MainDrawer extends StatelessWidget {
                         'assets/logo.png',
                         height: 40,
                       ),
-                      SizedBox(width: 8),
+                      SizedBox(width: 10),
                       Text(
                         "Bookify",
                         style: TextStyle(

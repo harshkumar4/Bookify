@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/gridList.dart';
+
 class BuyUsedScreen extends StatelessWidget {
   const BuyUsedScreen({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-        padding: EdgeInsets.only(left: 20),
-        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+      padding: EdgeInsets.symmetric(horizontal: 20),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
           const SizedBox(height: 6),
-          Text(
+          const Text(
             'Used Books',
             style: TextStyle(
                 color: Colors.white, fontWeight: FontWeight.w900, fontSize: 35),
@@ -22,21 +26,21 @@ class BuyUsedScreen extends StatelessWidget {
             clipBehavior: Clip.antiAlias,
             child: Container(
               height: 50,
-              width: 370,
+              width: 380,
               color: Colors.white,
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   Padding(
                     padding: EdgeInsets.only(left: 10),
-                    child: Icon(
+                    child: const Icon(
                       Icons.search,
                       size: 30,
                       color: Colors.black,
                     ),
                   ),
                   const SizedBox(width: 10),
-                  Text(
+                  const Text(
                     "Search any book...",
                     style: TextStyle(
                       color: Colors.black,
@@ -46,6 +50,9 @@ class BuyUsedScreen extends StatelessWidget {
               ),
             ),
           ),
-        ]));
+          GridList(),
+        ],
+      ),
+    );
   }
 }
