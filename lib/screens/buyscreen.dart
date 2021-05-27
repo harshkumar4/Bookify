@@ -14,12 +14,12 @@ class BuyUsedScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const SizedBox(height: 6),
-          const Text(
+          Text(
             'Used Books',
             style: TextStyle(
               color: Colors.white,
-              fontWeight: FontWeight.w900,
               fontSize: 35,
+              fontWeight: FontWeight.w900,
             ),
           ),
           const SizedBox(height: 14),

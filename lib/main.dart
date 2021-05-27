@@ -19,13 +19,18 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Bookify',
       theme: ThemeData(
-        scaffoldBackgroundColor: Colors.black,
-        textTheme: GoogleFonts.poppinsTextTheme(
-          Theme.of(context).textTheme,
-        ),
-      ),
+          primaryColor: Colors.yellow,
+          accentColor: Colors.white,
+          backgroundColor: Colors.black,
+          appBarTheme: AppBarTheme(
+            backgroundColor: Colors.black,
+          ),
+          scaffoldBackgroundColor: Colors.black,
+          textTheme: GoogleFonts.poppinsTextTheme(
+            Theme.of(context).textTheme,
+          )),
       home: Builder(
         builder: (BuildContext context) {
           ScreenSize.intialize(context);

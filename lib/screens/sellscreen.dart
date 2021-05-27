@@ -17,7 +17,10 @@ class SellScreen extends StatelessWidget {
           Text(
             'Sell Books',
             style: TextStyle(
-                color: Colors.white, fontWeight: FontWeight.w900, fontSize: 35),
+              color: Colors.white,
+              fontSize: 35,
+              fontWeight: FontWeight.w900,
+            ),
           ),
           SizedBox(height: getRelativeHeight(0.03)),
           textField('Title', TextInputType.emailAddress),

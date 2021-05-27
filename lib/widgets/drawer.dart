@@ -29,7 +29,7 @@ class MainDrawer extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 40,
                           fontWeight: FontWeight.w900,
-                          color: Color(0xFFFFFFFF),
+                          color: Theme.of(context).accentColor,
                         ),
                       ),
                     ],
@@ -37,7 +37,7 @@ class MainDrawer extends StatelessWidget {
                 ),
               ),
               Divider(
-                color: Color(0xFF000000),
+                color: Theme.of(context).backgroundColor,
                 thickness: 2,
               ),
               _listItems(Icons.person, 'View Profile'),
@@ -64,10 +64,10 @@ class MainDrawer extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
-                  _iconButton(FaIcon(FontAwesomeIcons.linkedin)),
-                  _iconButton(FaIcon(FontAwesomeIcons.instagram)),
-                  _iconButton(FaIcon(FontAwesomeIcons.twitter)),
-                  _iconButton(FaIcon(FontAwesomeIcons.globe)),
+                  _iconButton(FaIcon(FontAwesomeIcons.linkedin), context),
+                  _iconButton(FaIcon(FontAwesomeIcons.instagram), context),
+                  _iconButton(FaIcon(FontAwesomeIcons.twitter), context),
+                  _iconButton(FaIcon(FontAwesomeIcons.globe), context),
                 ],
               ),
             ],
@@ -78,12 +78,12 @@ class MainDrawer extends StatelessWidget {
   }
 }
 
-Widget _iconButton(Widget icon) => Padding(
+Widget _iconButton(Widget icon, BuildContext context) => Padding(
       padding: const EdgeInsets.all(6),
       child: IconButton(
         iconSize: 25,
         icon: icon,
-        color: new Color(0xFFFFFF00),
+        color: Theme.of(context).primaryColor,
         onPressed: () {},
       ),
     );

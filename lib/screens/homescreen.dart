@@ -22,7 +22,10 @@ class _HomeScreenState extends State<HomeScreen> {
           Text(
             'Hi Guest!',
             style: TextStyle(
-                color: Colors.white, fontWeight: FontWeight.w900, fontSize: 35),
+              color: Colors.white,
+              fontSize: 35,
+              fontWeight: FontWeight.w900,
+            ),
           ),
           SizedBox(
             height: 36,
@@ -30,8 +33,8 @@ class _HomeScreenState extends State<HomeScreen> {
               'Let’s buy some new books!',
               style: TextStyle(
                 color: Color(0xFFC4C4C4),
-                fontWeight: FontWeight.w700,
                 fontSize: 20,
+                fontWeight: FontWeight.w700,
               ),
             ),
           ),

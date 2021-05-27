@@ -13,6 +13,7 @@ class _NavBarState extends State<NavBar> {
   var index = 0;
   @override
   Widget build(BuildContext context) {
+    print('build <<<<<<<');
     return BottomNavigationBar(
       currentIndex: index,
       selectedItemColor: Colors.yellow,

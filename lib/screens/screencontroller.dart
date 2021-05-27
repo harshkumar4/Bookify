@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../screens/buyusedscreen.dart';
+import 'buyscreen.dart';
 import '../screens/profilescreen.dart';
 import '../screens/chatscreen.dart';
 import '../screens/sellscreen.dart';

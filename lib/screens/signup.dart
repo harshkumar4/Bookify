@@ -1,3 +1,4 @@
+import 'package:bookify_try/widgets/buttons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -34,27 +35,30 @@ class SignUpScreen extends StatelessWidget {
                 SizedBox(height: getRelativeHeight(0.02)),
                 textField('Password', TextInputType.visiblePassword, true),
                 SizedBox(height: getRelativeHeight(0.03)),
-                ElevatedButton(
-                  style: ButtonStyle(
-                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(12.0))),
-                    backgroundColor:
-                        MaterialStateProperty.all(Colors.yellowAccent),
-                    foregroundColor: MaterialStateProperty.all(Colors.black),
-                    minimumSize:
-                        MaterialStateProperty.all(Size(double.infinity, 40)),
-                    alignment: Alignment.center,
+                CustomElevatedButton(
+                  child: const Text(
+                    'Create Account',
+                    style: TextStyle(fontWeight: FontWeight.w900, fontSize: 17),
                   ),
-                  child: const Text('Create Account',
-                      style:
-                          TextStyle(fontWeight: FontWeight.w900, fontSize: 17)),
-                  onPressed: () {
+                  onPressedFunction: () {
                     Navigator.of(context).pushNamed(LoginScreen().routeName);
                   },
+                  // size: Size(100, 50),
                 ),
                 SizedBox(height: getRelativeHeight(0.22)),
-                _signUpButton(),
+                googleButton(
+                  icon: Image.network(
+                    'https://cdn.changelog.com/uploads/icons/news_sources/Rr/icon_small.png?v=63685082660',
+                    fit: BoxFit.cover,
+                    height: 30,
+                    width: 30,
+                  ),
+                  label: const Text(
+                    'Log in with Google',
+                    style: TextStyle(fontWeight: FontWeight.w900, fontSize: 17),
+                  ),
+                  onPressedFunction: () {},
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -84,25 +88,3 @@ class SignUpScreen extends StatelessWidget {
     );
   }
 }
-
-Widget _signUpButton() => ElevatedButton.icon(
-      style: ButtonStyle(
-        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-            RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0))),
-        backgroundColor: MaterialStateProperty.all(Colors.white),
-        foregroundColor: MaterialStateProperty.all(Colors.black),
-        minimumSize: MaterialStateProperty.all(Size(double.infinity, 40)),
-        alignment: Alignment.center,
-      ),
-      icon: Image.network(
-        'https://cdn.changelog.com/uploads/icons/news_sources/Rr/icon_small.png?v=63685082660',
-        fit: BoxFit.cover,
-        height: 30,
-        width: 30,
-      ),
-      label: const Text(
-        'Sign Up with Google',
-        style: TextStyle(fontWeight: FontWeight.w900, fontSize: 17),
-      ),
-      onPressed: () {},
-    );
