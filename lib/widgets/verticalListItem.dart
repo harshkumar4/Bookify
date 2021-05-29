@@ -6,14 +6,14 @@ class VertListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: getRelativeHeight(0.72),
+      height: getRelativeHeight(0.74),
       child: ListView.builder(
         itemCount: 20,
         itemBuilder: (context, index) => Container(
           height: getRelativeHeight(0.16),
           padding: EdgeInsets.only(
             left: 8,
-            top: 8,
+            top: 15,
             bottom: 8,
           ),
           margin: EdgeInsets.symmetric(vertical: 6),

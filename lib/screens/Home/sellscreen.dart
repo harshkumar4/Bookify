@@ -33,7 +33,11 @@ class SellScreen extends StatelessWidget {
             textField('Description', TextInputType.text, lines: 4),
             SizedBox(height: getRelativeHeight(0.16)),
             CustomElevatedButton(
-              onPressedFunction: () {},
+              onPressedFunction: () {
+                Navigator.of(context).pushReplacement(MaterialPageRoute(
+                  builder: (ctx) => AddImageScreen(),
+                ));
+              },
               child: const Text(
                 'Next >',
                 style: TextStyle(

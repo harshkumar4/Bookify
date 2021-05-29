@@ -8,13 +8,13 @@ class GridList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: getRelativeHeight(0.64),
-      padding: EdgeInsets.only(top: 8),
+      height: getRelativeHeight(0.74),
+      padding: EdgeInsets.only(top: 15),
       child: GridView.builder(
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
           crossAxisSpacing: 18,
-          mainAxisSpacing: 12,
+          mainAxisSpacing: 18,
           childAspectRatio: 0.75,
         ),
         itemCount: 10,
@@ -25,7 +25,7 @@ class GridList extends StatelessWidget {
               Stack(
                 children: [
                   Container(
-                    height: 150,
+                    height: 180,
                     width: double.infinity,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(4),
@@ -50,7 +50,7 @@ class GridList extends StatelessWidget {
                         child: Text(
                           'Rs 200',
                           style: TextStyle(
-                            fontWeight: FontWeight.bold,
+                            fontWeight: FontWeight.w700,
                             color: Colors.black,
                           ),
                         ),
@@ -67,7 +67,7 @@ class GridList extends StatelessWidget {
               ),
               SizedBox(height: 3),
               Text(
-                'Rich Dad Poor Dad asfnaf salskfjlkas lkj jl',
+                'Rich Dad Poor Dad hjvash',
                 softWrap: true,
                 maxLines: 2,
                 overflow: TextOverflow.clip,
