@@ -1,7 +1,7 @@
 import 'package:bookify_try/sizeconfig.dart';
 import 'package:flutter/material.dart';
 
-import '../widgets/gridList.dart';
+import '../../widgets/gridList.dart';
 
 class BuyUsedScreen extends StatelessWidget {
   const BuyUsedScreen({Key key}) : super(key: key);

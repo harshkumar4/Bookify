@@ -2,10 +2,10 @@ import 'package:bookify_try/widgets/buttons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '../sizeconfig.dart';
+import '../../sizeconfig.dart';
 
-import '../widgets/authinputfield.dart';
-import 'package:bookify_try/screens/login.dart';
+import '../../widgets/inputfield.dart';
+import 'package:bookify_try/screens/Auth/login.dart';
 
 class SignUpScreen extends StatelessWidget {
   @override
@@ -33,7 +33,8 @@ class SignUpScreen extends StatelessWidget {
                 SizedBox(height: getRelativeHeight(0.02)),
                 textField('Email', TextInputType.emailAddress),
                 SizedBox(height: getRelativeHeight(0.02)),
-                textField('Password', TextInputType.visiblePassword, true),
+                textField('Password', TextInputType.visiblePassword,
+                    hiddenText: true),
                 SizedBox(height: getRelativeHeight(0.03)),
                 CustomElevatedButton(
                   child: const Text(

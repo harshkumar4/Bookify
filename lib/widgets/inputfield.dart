@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-Widget textField(String label, TextInputType keyboard,
-        [bool hiddenText = false]) =>
+Widget textField(
+  String label,
+  TextInputType keyboard, {
+  int lines = 1,
+  bool hiddenText = false,
+}) =>
     Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -16,8 +20,10 @@ Widget textField(String label, TextInputType keyboard,
           ),
         ),
         Container(
-          height: 50,
+          height: lines == 1 ? 50 : double.parse('${lines * 30}'),
           child: TextFormField(
+            maxLines: lines,
+            maxLengthEnforcement: MaxLengthEnforcement.enforced,
             textAlignVertical: TextAlignVertical.center,
             obscureText: hiddenText,
             style: const TextStyle(color: Colors.yellowAccent, fontSize: 18),
@@ -25,12 +31,13 @@ Widget textField(String label, TextInputType keyboard,
             cursorColor: Colors.yellowAccent,
             cursorHeight: 24,
             inputFormatters: [
-              FilteringTextInputFormatter.deny(RegExp(r'[ ]')),
+              // FilteringTextInputFormatter.deny(RegExp(r'[ ]')),
             ],
             decoration: InputDecoration(
               contentPadding: EdgeInsets.only(
-                // vertical: 2,
-                left: 12,
+                left: 10,
+                right: 6,
+                top: 6,
               ),
               focusedErrorBorder: const OutlineInputBorder(
                 borderSide: const BorderSide(color: Colors.redAccent, width: 2),

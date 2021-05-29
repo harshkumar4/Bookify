@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-import 'buyscreen.dart';
-import '../screens/profilescreen.dart';
-import '../screens/chatscreen.dart';
-import '../screens/sellscreen.dart';
-import '../screens/homescreen.dart';
+import 'Home/buyscreen.dart';
+import 'Home/profilescreen.dart';
+import 'Home/chatscreen.dart';
+import 'Home/sellscreen.dart';
+import 'Home/homescreen.dart';
 
-import '../widgets/navbar.dart';
-import '../widgets/appbar.dart';
-import '../widgets/drawer.dart';
+import '../widgets/scaffold/navbar.dart';
+import '../widgets/scaffold/appbar.dart';
+import '../widgets/scaffold/drawer.dart';
 
 class ScreenController extends StatefulWidget {
   final routeName = '/homescreen';

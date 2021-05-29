@@ -3,7 +3,7 @@ import 'package:bookify_try/sizeconfig.dart';
 import 'package:bookify_try/widgets/buttons.dart';
 import 'package:flutter/material.dart';
 
-import '../widgets/authinputfield.dart';
+import '../../widgets/inputfield.dart';
 
 class LoginScreen extends StatelessWidget {
   final routeName = '/login';
@@ -30,7 +30,8 @@ class LoginScreen extends StatelessWidget {
                   SizedBox(height: getRelativeHeight(0.03)),
                   textField('Email', TextInputType.emailAddress),
                   SizedBox(height: getRelativeHeight(0.02)),
-                  textField('Password', TextInputType.visiblePassword, true),
+                  textField('Password', TextInputType.visiblePassword,
+                      hiddenText: true),
                   SizedBox(height: getRelativeHeight(0.03)),
                   CustomElevatedButton(
                     onPressedFunction: () {},

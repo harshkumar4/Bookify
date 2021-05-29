@@ -7,8 +7,8 @@ import './sizeconfig.dart';
 
 import './screens/morescreen.dart';
 import './screens/screencontroller.dart';
-import './screens/signup.dart';
-import './screens/login.dart';
+import 'screens/Auth/signup.dart';
+import 'screens/Auth/login.dart';
 
 void main() {
   runApp(MyApp());

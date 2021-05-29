@@ -15,67 +15,70 @@ class GridList extends StatelessWidget {
           crossAxisCount: 2,
           crossAxisSpacing: 18,
           mainAxisSpacing: 12,
-          childAspectRatio: 0.8,
+          childAspectRatio: 0.75,
         ),
         itemCount: 10,
-        itemBuilder: (ctx, i) => Stack(
-          children: [
-            Container(
-              padding: EdgeInsets.all(6),
-              decoration: BoxDecoration(
-                border: Border.all(
-                  width: 2,
-                  color: Colors.white,
-                ),
-                borderRadius: BorderRadius.circular(4),
-              ),
-              child: Column(
+        itemBuilder: (ctx, i) => Container(
+          padding: EdgeInsets.symmetric(horizontal: 8),
+          child: Column(
+            children: [
+              Stack(
                 children: [
-                  ClipRRect(
-                    child: Image.asset(
-                      'assets/rdpd.JPG',
-                      height: 120,
-                      width: double.infinity,
+                  Container(
+                    height: 150,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(4),
+                      border: Border.all(
+                        color: Colors.white,
+                        width: 2,
+                      ),
                     ),
-                    borderRadius: BorderRadius.circular(20),
+                    child: ClipRRect(
+                      child: Image.asset(
+                        'assets/rdpd.JPG',
+                        fit: BoxFit.fill,
+                      ),
+                      borderRadius: BorderRadius.circular(4),
+                    ),
                   ),
-                  SizedBox(height: 4),
-                  Text(
-                    'Rich Dad Poor Dad',
-                    softWrap: true,
-                    maxLines: 2,
-                    overflow: TextOverflow.clip,
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
+                  Positioned(
+                    child: Material(
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 2.0, horizontal: 4),
+                        child: Text(
+                          'Rs 200',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black,
+                          ),
+                        ),
+                      ),
+                      color: Color(0xFFFFFF00),
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(2),
+                      ),
                     ),
+                    bottom: 2,
+                    right: 2,
                   ),
                 ],
               ),
-            ),
-            Positioned(
-              child: Material(
-                child: Padding(
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 2.0, horizontal: 4),
-                  child: Text(
-                    'Rs 200',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black,
-                    ),
-                  ),
-                ),
-                color: Color(0xFFFFFF00),
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(2),
+              SizedBox(height: 3),
+              Text(
+                'Rich Dad Poor Dad asfnaf salskfjlkas lkj jl',
+                softWrap: true,
+                maxLines: 2,
+                overflow: TextOverflow.clip,
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
                 ),
               ),
-              bottom: 2,
-              right: 2,
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
