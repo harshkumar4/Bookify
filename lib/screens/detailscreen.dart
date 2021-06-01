@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 
 import '../sizeconfig.dart';
 
+import '../screens/codscreen.dart';
+
 class DetailScreen extends StatelessWidget {
   final routeName = '/detail-screen';
   @override
@@ -27,31 +29,13 @@ class DetailScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                // color: Colors.yellow,
                 height: getRelativeHeight(0.25),
-                padding: const EdgeInsets.only(
-                  // left: 20,
-                  // right: 20,
-                  top: 10,
-                  // bottom: 8,
+                margin: const EdgeInsets.symmetric(
+                  vertical: 20,
                 ),
-                // margin: EdgeInsets.symmetric(
-                //   // vertical: 8,
-                //   horizontal: 20,
-                // ),
                 child: Row(
                   children: [
                     Container(
-                      // color: Colors.red,
-                      // padding: EdgeInsets.all(1),
-                      // decoration: BoxDecoration(
-                      //   // borderRadius: BorderRadius.circular(8),
-                      //   // color: Colors.red,
-                      //   // border: Border.all(
-                      //   //   color: Colors.white,
-                      //   //   width: 1,
-                      //   // ),
-                      // ),
                       width: getRelativeWidht(0.3),
                       height: double.maxFinite,
                       child: ClipRRect(
@@ -65,7 +49,6 @@ class DetailScreen extends StatelessWidget {
                     Container(
                       margin: const EdgeInsets.only(left: 14),
                       width: getRelativeWidht(0.55),
-                      // color: Colors.yellow,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
@@ -95,7 +78,7 @@ class DetailScreen extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.end,
                             children: [
                               Material(
-                                color: const Color(0xFFFFFF00),
+                                color: Theme.of(context).primaryColor,
                                 clipBehavior: Clip.antiAlias,
                                 child: Padding(
                                   padding: const EdgeInsets.symmetric(
@@ -119,10 +102,10 @@ class DetailScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 18),
               Text(
                 'About : -',
                 style: const TextStyle(
+                  letterSpacing: 0.8,
                   fontSize: 24,
                   fontWeight: FontWeight.w600,
                   color: Colors.white,
@@ -137,16 +120,6 @@ class DetailScreen extends StatelessWidget {
                   color: Colors.white,
                 ),
               ),
-              // CustomElevatedButton(
-              //   onPressedFunction: () {},
-              //   child: Text(
-              //     'Buy Now',
-              //     style: TextStyle(
-              //       fontSize: 18,
-              //       fontWeight: FontWeight.w700,
-              //     ),
-              //   ),
-              // ),
             ],
           ),
         ),
@@ -156,15 +129,16 @@ class DetailScreen extends StatelessWidget {
             vertical: 8,
           ),
           child: CustomElevatedButton(
-            child: Text(
-              'Buy Now',
-              style: const TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.w700,
+              child: Text(
+                'Buy Now',
+                style: const TextStyle(
+                  letterSpacing: 1,
+                  fontSize: 18,
+                  fontWeight: FontWeight.w700,
+                ),
               ),
-            ),
-            onPressedFunction: () {},
-          ),
+              onPressedFunction: () =>
+                  Navigator.of(context).pushNamed(CodScreen().routeName)),
         ),
       ),
     );
