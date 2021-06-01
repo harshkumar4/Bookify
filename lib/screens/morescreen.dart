@@ -22,9 +22,8 @@ class _MoreScreenState extends State<MoreScreen> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.black,
           leading: IconButton(
-            icon: Icon(
+            icon: const Icon(
               Icons.arrow_back_sharp,
               size: 30,
               color: Colors.white,
@@ -35,7 +34,7 @@ class _MoreScreenState extends State<MoreScreen> {
           ),
         ),
         body: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 18),
+          padding: const EdgeInsets.symmetric(horizontal: 18),
           child: Column(
             mainAxisSize: MainAxisSize.max,
             crossAxisAlignment: CrossAxisAlignment.start,

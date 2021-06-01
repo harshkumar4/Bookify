@@ -1,4 +1,4 @@
-# bookify_try
+# Bookify
 
 A new Flutter project.
 

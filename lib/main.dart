@@ -1,4 +1,5 @@
 import 'package:bookify_try/screens/addimage.dart';
+import 'package:bookify_try/screens/detailscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
@@ -21,16 +22,17 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Bookify',
       theme: ThemeData(
-          primaryColor: Colors.yellow,
-          accentColor: Colors.white,
+        primaryColor: Colors.yellow,
+        accentColor: Colors.white,
+        backgroundColor: Colors.black,
+        appBarTheme: AppBarTheme(
           backgroundColor: Colors.black,
-          appBarTheme: AppBarTheme(
-            backgroundColor: Colors.black,
-          ),
-          scaffoldBackgroundColor: Colors.black,
-          textTheme: GoogleFonts.poppinsTextTheme(
-            Theme.of(context).textTheme,
-          )),
+        ),
+        scaffoldBackgroundColor: Colors.black,
+        textTheme: GoogleFonts.poppinsTextTheme(
+          Theme.of(context).textTheme,
+        ),
+      ),
       home: Builder(
         builder: (BuildContext context) {
           ScreenSize.intialize(context);
@@ -47,6 +49,7 @@ class MyApp extends StatelessWidget {
       routes: {
         LoginScreen().routeName: (context) => LoginScreen(),
         MoreScreen().routeName: (context) => MoreScreen(),
+        DetailScreen().routeName: (context) => DetailScreen(),
       },
     );
   }
