@@ -1,4 +1,5 @@
 import 'package:bookify_try/screens/addimage.dart';
+import 'package:bookify_try/screens/codscreen.dart';
 import 'package:bookify_try/screens/detailscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -50,6 +51,7 @@ class MyApp extends StatelessWidget {
         LoginScreen().routeName: (context) => LoginScreen(),
         MoreScreen().routeName: (context) => MoreScreen(),
         DetailScreen().routeName: (context) => DetailScreen(),
+        CodScreen().routeName: (context) => CodScreen(),
       },
     );
   }
