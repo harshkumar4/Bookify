@@ -1,3 +1,4 @@
+import 'package:bookify_try/screens/Home/homescreen.dart';
 import 'package:bookify_try/screens/screencontroller.dart';
 import 'package:bookify_try/sizeconfig.dart';
 import 'package:bookify_try/widgets/buttons.dart';
@@ -10,16 +11,26 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
+      
       child: GestureDetector(
         onTap: () => FocusScope.of(context).unfocus(),
         child: Scaffold(
+          appBar: AppBar(backgroundColor: Colors.black, leading: IconButton(
+            icon: const Icon(
+              Icons.arrow_back_sharp,
+              size: 30,
+              color: Colors.white,
+            ),
+            onPressed: () {
+              Navigator.pop(context);
+            },
+          ),),
           body: SingleChildScrollView(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(height: getRelativeHeight(0.07)),
                   const Text(
                     'Log In',
                     style: TextStyle(
@@ -34,7 +45,13 @@ class LoginScreen extends StatelessWidget {
                       hiddenText: true),
                   SizedBox(height: getRelativeHeight(0.03)),
                   CustomElevatedButton(
-                    onPressedFunction: () {},
+                    onPressedFunction: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (ctx) => ScreenController(),
+                        ),
+                      );
+                    },
                     child: const Text(
                       'Log in',
                       style: TextStyle(

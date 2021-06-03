@@ -29,7 +29,7 @@ class DetailScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                height: getRelativeHeight(0.25),
+                height: getRelativeHeight(0.21),
                 margin: const EdgeInsets.symmetric(
                   vertical: 20,
                 ),
@@ -39,10 +39,17 @@ class DetailScreen extends StatelessWidget {
                       width: getRelativeWidht(0.3),
                       height: double.maxFinite,
                       child: ClipRRect(
-                        borderRadius: BorderRadius.circular(6),
+                        borderRadius: BorderRadius.circular(8),
                         child: Image.asset(
                           'assets/rdpd.JPG',
                           fit: BoxFit.fill,
+                        ),
+                      ),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8),
+                        border: Border.all(
+                          color: Colors.white,
+                          width: 2,
                         ),
                       ),
                     ),
@@ -60,7 +67,7 @@ class DetailScreen extends StatelessWidget {
                             style: const TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
-                              fontSize: 20,
+                              fontSize: 24,
                             ),
                           ),
                           Text(
@@ -69,7 +76,7 @@ class DetailScreen extends StatelessWidget {
                             maxLines: 1,
                             overflow: TextOverflow.clip,
                             style: const TextStyle(
-                              fontSize: 16,
+                              fontSize: 18,
                               color: const Color.fromRGBO(192, 192, 192, 1),
                             ),
                           ),
@@ -78,7 +85,7 @@ class DetailScreen extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.end,
                             children: [
                               Material(
-                                color: Theme.of(context).primaryColor,
+                                color: Color(0xFFFFFF00),
                                 clipBehavior: Clip.antiAlias,
                                 child: Padding(
                                   padding: const EdgeInsets.symmetric(
@@ -117,7 +124,7 @@ class DetailScreen extends StatelessWidget {
                 style: const TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w400,
-                  color: Colors.white,
+                  color: Color(0xFFC4C4C4),
                 ),
               ),
             ],
@@ -125,7 +132,7 @@ class DetailScreen extends StatelessWidget {
         ),
         bottomNavigationBar: Padding(
           padding: const EdgeInsets.symmetric(
-            horizontal: 16,
+            horizontal: 20,
             vertical: 8,
           ),
           child: CustomElevatedButton(

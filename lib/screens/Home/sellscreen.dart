@@ -34,7 +34,7 @@ class SellScreen extends StatelessWidget {
             SizedBox(height: getRelativeHeight(0.16)),
             CustomElevatedButton(
               onPressedFunction: () {
-                Navigator.of(context).pushReplacement(MaterialPageRoute(
+                Navigator.of(context).push(MaterialPageRoute(
                   builder: (ctx) => AddImageScreen(),
                 ));
               },

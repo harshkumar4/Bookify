@@ -8,7 +8,7 @@ class CustomElevatedButton extends ElevatedButton {
   CustomElevatedButton({
     this.onPressedFunction,
     this.child,
-    this.size = const Size(double.infinity, 40),
+    this.size = const Size(double.infinity, 45),
   }) : super(
           child: child,
           onPressed: onPressedFunction,
@@ -63,7 +63,7 @@ Widget googleButton({
             RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0))),
         backgroundColor: MaterialStateProperty.all(Colors.white),
         foregroundColor: MaterialStateProperty.all(Colors.black),
-        minimumSize: MaterialStateProperty.all(Size(double.infinity, 40)),
+        minimumSize: MaterialStateProperty.all(Size(double.infinity, 45)),
         alignment: Alignment.center,
       ),
       icon: icon,

@@ -10,7 +10,7 @@ import 'package:flutter/material.dart';
 
 class CarouselScreen extends StatefulWidget {
   final routeName = '/carousel';
-  
+
   @override
   CarouselScreenState createState() => CarouselScreenState();
 }
@@ -31,7 +31,7 @@ class CarouselScreenState extends State<CarouselScreen> {
 
       _pageController.animateToPage(
         _currentPage,
-        duration: Duration(milliseconds: 300),
+        duration: Duration(milliseconds: 200),
         curve: Curves.easeIn,
       );
     });
@@ -97,55 +97,72 @@ class CarouselScreenState extends State<CarouselScreen> {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: <Widget>[
-                  FlatButton(
-                      child: Text(
-                        'Getting Started',
-                        style: TextStyle(
-                          fontSize: 18,
+                  CustomElevatedButton(
+                    child: Text(
+                      'Log In',
+                      style: const TextStyle(
+                        letterSpacing: 1,
+                        fontSize: 18,
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+                    onPressedFunction: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (ctx) => LoginScreen(),
                         ),
+                      );
+                    },
+                  ),
+                  SizedBox(height: 8),
+                  FlatButton(
+                    color: Colors.black,
+                    child: Text(
+                      'Sign Up',
+                      style: const TextStyle(
+                        color: Color(0xFFFFFF00),
+                        letterSpacing: 1,
+                        fontSize: 18,
+                        fontWeight: FontWeight.w700,
                       ),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(5),
-                      ),
-                      padding: const EdgeInsets.all(15),
-                      color: Color(0xFFFFFF00),
-                      textColor: Colors.black,
-                      onPressed: () {
-                        Navigator.of(context).pushReplacement(
-                          MaterialPageRoute(
-                            builder: (ctx) => SignUpScreen(),
-                          ),
-                        );
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            Text(
-                              'Have an account?',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 18,
-                              ),
-                            ),
-                            CustomElevatedButton(
-                              child: Text(
-                                'Login',
-                                style: const TextStyle(
-                                  letterSpacing: 1,
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w700,
-                                ),
-                              ),
-                              onPressedFunction: () {
-                                Navigator.of(context).pushReplacement(
-                                  MaterialPageRoute(
-                                    builder: (ctx) => LoginScreen(),
-                                  ),
-                                );
-                              },
-                            ),
-                          ],
-                        );
-                      }),
+                    ),
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (ctx) => SignUpScreen(),
+                        ),
+                      );
+                    },
+                  ),
+                  // Row(
+                  //   mainAxisAlignment: MainAxisAlignment.center,
+                  //   children: <Widget>[
+                  //     // Text(
+                  //     //   'Have an account?',
+                  //     //   style: TextStyle(
+                  //     //     color: Colors.white,
+                  //     //     fontSize: 18,
+                  //     //   ),
+                  //     // ),
+                  //     CustomElevatedButton(
+                  //       child: Text(
+                  //         'Login',
+                  //         style: const TextStyle(
+                  //           letterSpacing: 1,
+                  //           fontSize: 18,
+                  //           fontWeight: FontWeight.w700,
+                  //         ),
+                  //       ),
+                  //       onPressedFunction: () {
+                  //         Navigator.of(context).pushReplacement(
+                  //           MaterialPageRoute(
+                  //             builder: (ctx) => LoginScreen(),
+                  //           ),
+                  //         );
+                  //       },
+                  //     ),
+                  //   ],
+                  // ),
                 ],
               )
             ],

@@ -12,10 +12,9 @@ class SlideItem extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
         Container(
-          width: 200,
-          height: 200,
+          width: 250,
+          height: 250,
           decoration: BoxDecoration(
-            shape: BoxShape.circle,
             image: DecorationImage(
               image: AssetImage(slideList[index].imageUrl),
               fit: BoxFit.cover,

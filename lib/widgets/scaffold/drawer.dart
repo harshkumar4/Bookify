@@ -43,8 +43,8 @@ class MainDrawer extends StatelessWidget {
               _listItems(Icons.person, 'View Profile'),
               _listItems(Icons.book, 'About Us'),
               _listItems(Icons.favorite, 'Rate on Play Store'),
-              _listItems(Icons.adb, 'Report Bugs'),
               _listItems(Icons.share, 'Invite Friends'),
+              _listItems(Icons.adb, 'Report Bugs'),
               SizedBox(height: getRelativeHeight(0.26)),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
