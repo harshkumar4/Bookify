@@ -1,3 +1,4 @@
+import 'package:bookify_try/screens/Home/carouselscreen.dart';
 import 'package:bookify_try/screens/addimage.dart';
 import 'package:bookify_try/screens/codscreen.dart';
 import 'package:bookify_try/screens/detailscreen.dart';
@@ -41,13 +42,14 @@ class MyApp extends StatelessWidget {
             splashIconSize: double.infinity,
             splash: 'assets/splashscreenicon.png',
             nextScreen: ScreenController(),
-            duration: 100,
+            duration: 500,
             backgroundColor: Colors.black,
             splashTransition: SplashTransition.fadeTransition,
           );
         },
       ),
       routes: {
+        CarouselScreen().routeName: (context) => CarouselScreen(),
         LoginScreen().routeName: (context) => LoginScreen(),
         MoreScreen().routeName: (context) => MoreScreen(),
         DetailScreen().routeName: (context) => DetailScreen(),

@@ -15,7 +15,7 @@ class GridList extends StatelessWidget {
           crossAxisCount: 2,
           crossAxisSpacing: 18,
           mainAxisSpacing: 18,
-          childAspectRatio: 0.75,
+          childAspectRatio: 0.65,
         ),
         itemCount: 10,
         itemBuilder: (ctx, i) => Container(
@@ -25,10 +25,10 @@ class GridList extends StatelessWidget {
               Stack(
                 children: [
                   Container(
-                    height: 180,
+                    height: 220,
                     width: double.infinity,
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(4),
+                      borderRadius: BorderRadius.circular(8),
                       border: Border.all(
                         color: Colors.white,
                         width: 2,
@@ -39,7 +39,7 @@ class GridList extends StatelessWidget {
                         'assets/rdpd.JPG',
                         fit: BoxFit.fill,
                       ),
-                      borderRadius: BorderRadius.circular(4),
+                      borderRadius: BorderRadius.circular(8),
                     ),
                   ),
                   Positioned(

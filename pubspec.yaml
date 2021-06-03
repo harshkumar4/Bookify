@@ -50,6 +50,10 @@ flutter:
     - assets/splashscreenicon.png
     - assets/drawericon.png
     - assets/rdpd.JPG
+    - assets/bookreader.png
+    - assets/earn.png
+    - assets/delivery.png
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 
