@@ -34,7 +34,7 @@ class ItemsListWid extends StatelessWidget {
                         // color: Colors.red,
                         border: Border.all(
                           color: Colors.white,
-                          width: 1,
+                          width: 2,
                         ),
                       ),
                       height: 150,

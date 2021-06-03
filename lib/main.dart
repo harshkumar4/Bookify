@@ -1,12 +1,13 @@
-import 'package:bookify_try/screens/addimage.dart';
-import 'package:bookify_try/screens/codscreen.dart';
-import 'package:bookify_try/screens/detailscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 
 import './sizeconfig.dart';
 
+import './screens/addimage.dart';
+import './screens/codscreen.dart';
+import './screens/detailscreen.dart';
+import './screens/usedbooksdetail.dart';
 import './screens/morescreen.dart';
 import './screens/screencontroller.dart';
 import 'screens/Auth/signup.dart';
@@ -52,6 +53,7 @@ class MyApp extends StatelessWidget {
         MoreScreen().routeName: (context) => MoreScreen(),
         DetailScreen().routeName: (context) => DetailScreen(),
         CodScreen().routeName: (context) => CodScreen(),
+        UsedBooksDetails().routeName: (context) => UsedBooksDetails(),
       },
     );
   }
