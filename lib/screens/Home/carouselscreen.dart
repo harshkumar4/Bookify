@@ -1,12 +1,14 @@
 import 'dart:async';
+import 'package:bookify_try/screens/screencontroller.dart';
+import 'package:flutter/material.dart';
 
 import 'package:bookify_try/screens/Auth/login.dart';
 import 'package:bookify_try/screens/Auth/signup.dart';
+
 import 'package:bookify_try/widgets/buttons.dart';
 import 'package:bookify_try/widgets/slide.dart';
 import 'package:bookify_try/widgets/slide_dots.dart';
 import 'package:bookify_try/widgets/slide_item.dart';
-import 'package:flutter/material.dart';
 
 class CarouselScreen extends StatefulWidget {
   final routeName = '/carousel';
@@ -53,7 +55,6 @@ class CarouselScreenState extends State<CarouselScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: Colors.black,
         child: Padding(
           padding: const EdgeInsets.all(20),
           child: Column(
@@ -107,11 +108,8 @@ class CarouselScreenState extends State<CarouselScreen> {
                       ),
                     ),
                     onPressedFunction: () {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (ctx) => LoginScreen(),
-                        ),
-                      );
+                      Navigator.of(context)
+                          .pushNamed(ScreenController().routeName);
                     },
                   ),
                   SizedBox(height: 8),

@@ -50,6 +50,7 @@ class MyApp extends StatelessWidget {
         },
       ),
       routes: {
+        ScreenController().routeName: (context) => ScreenController(),
         CarouselScreen().routeName: (context) => CarouselScreen(),
         LoginScreen().routeName: (context) => LoginScreen(),
         MoreScreen().routeName: (context) => MoreScreen(),
