@@ -1,3 +1,4 @@
+import 'package:bookify_try/widgets/gridList.dart';
 import 'package:flutter/material.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -145,15 +146,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   )),
             ],
           ),
-          tab == 'posted'
-              ? Padding(
-                  padding: EdgeInsets.only(top: 10, left: 10, right: 10),
-                  child: Text(
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Erat nam at lectus urna duis convallis. Dignissim cras tincidunt lobortis feugiat vivamus at augue. Aliquam malesuada bibendum arcu vitae elementum curabitur. Scelerisque varius morbi enim nunc faucibus. Dui id ornare arcu odio ut sem nulla. Tempor commodo ullamcorper a lacus vestibulum sed arcu. Adipiscing diam donec adipiscing tristique risus nec feugiat. Massa sapien faucibus et molestie ac feugiat sed lectus vestibulum. Ultrices gravida dictum fusce ut placerat orci nulla. Purus non enim praesent elementum facilisis leo. Mi bibendum neque egestas congue quisque egestas. Pulvinar mattis nunc sed blandit. Sed vulputate odio ut enim blandit volutpat.',
-                    style: TextStyle(fontSize: 20, color: Colors.black),
-                  ),
-                )
-              : Table(),
+          tab == 'posted' ? GridList() : Table(),
         ],
       ),
     );
