@@ -1,4 +1,5 @@
 import 'package:bookify_try/screens/Home/carouselscreen.dart';
+import 'package:bookify_try/screens/chatscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
@@ -57,6 +58,7 @@ class MyApp extends StatelessWidget {
         DetailScreen().routeName: (context) => DetailScreen(),
         CodScreen().routeName: (context) => CodScreen(),
         UsedBooksDetails().routeName: (context) => UsedBooksDetails(),
+        ChatScreen().routeName: (context) => ChatScreen(),
       },
     );
   }

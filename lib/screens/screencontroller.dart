@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'Home/buyscreen.dart';
 import 'Home/profilescreen.dart';
-import 'Home/chatscreen.dart';
+import 'Home/chathomescreen.dart';
 import 'Home/sellscreen.dart';
 import 'Home/homescreen.dart';
 
@@ -23,7 +23,7 @@ class _ScreenControllerState extends State<ScreenController> {
     HomeScreen(),
     BuyUsedScreen(),
     SellScreen(),
-    ChatScreen(),
+    ChatHomeScreen(),
     ProfileScreen(),
   ];
   int _screenindex = 0;

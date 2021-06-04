@@ -1,3 +1,4 @@
+import 'package:bookify_try/screens/chatscreen.dart';
 import 'package:flutter/material.dart';
 
 class Chats extends StatelessWidget {
@@ -47,7 +48,9 @@ class Chats extends StatelessWidget {
                   fontWeight: FontWeight.w500,
                 ),
               ),
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context).pushNamed(ChatScreen().routeName);
+              },
             ),
             Divider(
               color: Colors.grey,
