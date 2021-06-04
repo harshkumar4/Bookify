@@ -6,7 +6,7 @@ import 'package:bookify_try/screens/Auth/login.dart';
 import 'package:bookify_try/screens/Auth/signup.dart';
 
 import 'package:bookify_try/widgets/buttons.dart';
-import 'package:bookify_try/widgets/slide.dart';
+import 'package:bookify_try/models/slide.dart';
 import 'package:bookify_try/widgets/slide_dots.dart';
 import 'package:bookify_try/widgets/slide_item.dart';
 

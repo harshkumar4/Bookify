@@ -1,3 +1,4 @@
+import 'package:bookify_try/widgets/chats.dart';
 import 'package:flutter/material.dart';
 
 class ChatScreen extends StatelessWidget {
@@ -6,12 +7,12 @@ class ChatScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      padding: EdgeInsets.only(left: 20),
+      padding: EdgeInsets.symmetric(horizontal: 20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const SizedBox(height: 6),
-          Text(
+          const Text(
             'Chats',
             style: TextStyle(
               color: Colors.white,
@@ -19,6 +20,7 @@ class ChatScreen extends StatelessWidget {
               fontWeight: FontWeight.w900,
             ),
           ),
+          Chats(),
         ],
       ),
     );

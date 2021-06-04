@@ -1,4 +1,4 @@
-import 'package:bookify_try/widgets/slide.dart';
+import 'package:bookify_try/models/slide.dart';
 import 'package:flutter/material.dart';
 
 class SlideItem extends StatelessWidget {
