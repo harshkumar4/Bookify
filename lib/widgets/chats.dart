@@ -25,7 +25,7 @@ class Chats extends StatelessWidget {
                 foregroundColor: Colors.purple.shade100,
               ),
               title: Text(
-                'SoniKHudi',
+                'Kartik',
                 style: TextStyle(
                   color: Theme.of(context).accentColor,
                   fontWeight: FontWeight.w600,
