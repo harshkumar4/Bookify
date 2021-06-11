@@ -60,17 +60,17 @@ class _MoreScreenState extends State<MoreScreen> {
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
-                      Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 10),
-                        child: Icon(
+                      const Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 10),
+                        child: const Icon(
                           Icons.search,
                           size: 30,
                           color: Colors.black,
                         ),
                       ),
-                      Text(
+                      const Text(
                         "Search any book...",
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: Colors.black,
                         ),
                       ),
@@ -78,8 +78,8 @@ class _MoreScreenState extends State<MoreScreen> {
                   ),
                 ),
               ),
-              SizedBox(height: 10),
-              VertListItem(),
+              const SizedBox(height: 10),
+              Expanded(child: VertListItem()),
             ],
           ),
         ),

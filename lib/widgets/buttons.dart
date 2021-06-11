@@ -15,7 +15,6 @@ class CustomElevatedButton extends ElevatedButton {
         );
 
   @override
-  // TODO: implement style
   ButtonStyle get style => ButtonStyle(
         shape: MaterialStateProperty.all<RoundedRectangleBorder>(
           RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0)),

@@ -1,7 +1,7 @@
-import 'package:bookify_try/sizeconfig.dart';
-import 'package:bookify_try/widgets/buttons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+
+import 'package:bookify/widgets/buttons.dart';
 
 class UsedBooksDetails extends StatefulWidget {
   final routeName = 'usedbooks-detail';
@@ -16,7 +16,6 @@ class _UsedBooksDetailsState extends State<UsedBooksDetails> {
 
   @override
   void initState() {
-    // TODO: implement initState
     _controller = ScrollController();
     _controller.addListener(() {
       setState(() {
@@ -62,7 +61,7 @@ class _UsedBooksDetailsState extends State<UsedBooksDetails> {
                           Icons.bookmark,
                           color: Theme.of(context).primaryColor,
                         )
-                      : Icon(
+                      : const Icon(
                           Icons.bookmark_add_outlined,
                         ),
                   onPressed: () => setState(() => _isFav = !_isFav),
@@ -90,7 +89,7 @@ class _UsedBooksDetailsState extends State<UsedBooksDetails> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Flexible(
-                          child: Text(
+                          child: const Text(
                             'Robert T. Kiyosaki',
                             maxLines: 1,
                             softWrap: true,
@@ -106,7 +105,7 @@ class _UsedBooksDetailsState extends State<UsedBooksDetails> {
                           child: Padding(
                             padding: const EdgeInsets.symmetric(
                                 vertical: 2.0, horizontal: 4),
-                            child: Text(
+                            child: const Text(
                               'Rs 200',
                               style: TextStyle(
                                 fontWeight: FontWeight.w700,
@@ -119,7 +118,7 @@ class _UsedBooksDetailsState extends State<UsedBooksDetails> {
                         ),
                       ],
                     ),
-                    SizedBox(height: 16),
+                    const SizedBox(height: 16),
                     Text(
                       'Diary of a Wimpy Kid is a series of fiction books written by American author and cartoonist.',
                       style: TextStyle(
@@ -128,7 +127,7 @@ class _UsedBooksDetailsState extends State<UsedBooksDetails> {
                         color: Theme.of(context).accentColor,
                       ),
                     ),
-                    SizedBox(height: 30),
+                    const SizedBox(height: 30),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -138,14 +137,14 @@ class _UsedBooksDetailsState extends State<UsedBooksDetails> {
                         _greyBoxes(Icons.book, 'Posted on Nov 18'),
                       ],
                     ),
-                    SizedBox(height: 40),
+                    const SizedBox(height: 40),
                     ListTile(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
                       ),
                       leading: CircleAvatar(
                         backgroundColor: Colors.purple,
-                        child: Text(
+                        child: const Text(
                           'S',
                           style: TextStyle(
                             fontSize: 28,
@@ -153,7 +152,7 @@ class _UsedBooksDetailsState extends State<UsedBooksDetails> {
                         ),
                         foregroundColor: Colors.purple.shade100,
                       ),
-                      title: Text(
+                      title: const Text(
                         'Ad Posted By',
                         style: TextStyle(
                           fontWeight: FontWeight.w600,
@@ -161,7 +160,7 @@ class _UsedBooksDetailsState extends State<UsedBooksDetails> {
                         ),
                       ),
                       tileColor: Colors.purple.shade100,
-                      subtitle: Text(
+                      subtitle: const Text(
                         'Someone',
                         style: TextStyle(
                           fontWeight: FontWeight.w600,
@@ -169,7 +168,7 @@ class _UsedBooksDetailsState extends State<UsedBooksDetails> {
                         ),
                       ),
                     ),
-                    SizedBox(height: 30),
+                    const SizedBox(height: 30),
                     Container(
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(10),
@@ -184,7 +183,7 @@ class _UsedBooksDetailsState extends State<UsedBooksDetails> {
                         borderRadius: BorderRadius.circular(10),
                       ),
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
 
                     // Container(height: 800),
                   ],
@@ -200,7 +199,7 @@ class _UsedBooksDetailsState extends State<UsedBooksDetails> {
           // color: Theme.of(context).primaryColor,
           child: CustomElevatedButton(
             onPressedFunction: () {},
-            child: Text(
+            child: const Text(
               'Make Deal',
               style: const TextStyle(
                 letterSpacing: 1,

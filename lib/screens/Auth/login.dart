@@ -1,7 +1,6 @@
-import 'package:bookify_try/screens/Home/homescreen.dart';
-import 'package:bookify_try/screens/screencontroller.dart';
-import 'package:bookify_try/sizeconfig.dart';
-import 'package:bookify_try/widgets/buttons.dart';
+import 'package:bookify/screens/screencontroller.dart';
+import 'package:bookify/sizeconfig.dart';
+import 'package:bookify/widgets/buttons.dart';
 import 'package:flutter/material.dart';
 
 import '../../widgets/inputfield.dart';
@@ -11,29 +10,19 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      
       child: GestureDetector(
         onTap: () => FocusScope.of(context).unfocus(),
         child: Scaffold(
-          appBar: AppBar(backgroundColor: Colors.black, leading: IconButton(
-            icon: const Icon(
-              Icons.arrow_back_sharp,
-              size: 30,
-              color: Colors.white,
-            ),
-            onPressed: () {
-              Navigator.pop(context);
-            },
-          ),),
           body: SingleChildScrollView(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  const SizedBox(height: 40),
                   const Text(
                     'Log In',
-                    style: TextStyle(
+                    style: const TextStyle(
                         color: Colors.white,
                         fontSize: 30,
                         fontWeight: FontWeight.w900),
@@ -46,15 +35,12 @@ class LoginScreen extends StatelessWidget {
                   SizedBox(height: getRelativeHeight(0.03)),
                   CustomElevatedButton(
                     onPressedFunction: () {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (ctx) => ScreenController(),
-                        ),
-                      );
+                      Navigator.of(context)
+                          .pushNamed(ScreenController().routeName);
                     },
                     child: const Text(
                       'Log in',
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontWeight: FontWeight.w900,
                         fontSize: 17,
                       ),
@@ -83,8 +69,10 @@ class LoginScreen extends StatelessWidget {
                     ),
                     label: const Text(
                       'Log in with Google',
-                      style:
-                          TextStyle(fontWeight: FontWeight.w900, fontSize: 17),
+                      style: TextStyle(
+                        fontWeight: FontWeight.w900,
+                        fontSize: 17,
+                      ),
                     ),
                     onPressedFunction: () {},
                   ),

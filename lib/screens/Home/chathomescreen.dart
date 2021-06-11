@@ -1,5 +1,6 @@
-import 'package:bookify_try/widgets/chats.dart';
 import 'package:flutter/material.dart';
+
+import 'package:bookify/widgets/chats.dart';
 
 class ChatHomeScreen extends StatelessWidget {
   const ChatHomeScreen({Key key}) : super(key: key);

@@ -13,7 +13,6 @@ class _NavBarState extends State<NavBar> {
   var index = 0;
   @override
   Widget build(BuildContext context) {
-    print('build <<<<<<<');
     return BottomNavigationBar(
       currentIndex: index,
       selectedItemColor: Colors.yellow,
@@ -32,11 +31,6 @@ class _NavBarState extends State<NavBar> {
           'Buy',
           Icon(Icons.shopping_cart),
           Icon(Icons.shopping_cart_outlined),
-        ),
-        _navItem(
-          'Sell',
-          Icon(Icons.monetization_on),
-          Icon(Icons.monetization_on_outlined),
         ),
         _navItem(
           'Chat',

@@ -10,7 +10,6 @@ class _ChatScreenState extends State<ChatScreen> {
   TextEditingController _controller;
   @override
   void initState() {
-    // TODO: implement initState
     _controller = TextEditingController();
     super.initState();
   }

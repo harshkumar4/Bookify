@@ -1,7 +1,6 @@
-import 'package:bookify_try/screens/usedbooksdetail.dart';
 import 'package:flutter/material.dart';
 
-import '../sizeconfig.dart';
+import 'package:bookify/screens/usedbooksdetail.dart';
 
 class GridList extends StatelessWidget {
   const GridList({Key key}) : super(key: key);
@@ -16,7 +15,7 @@ class GridList extends StatelessWidget {
         crossAxisCount: 2,
         crossAxisSpacing: 18,
         mainAxisSpacing: 18,
-        childAspectRatio: 0.65,
+        childAspectRatio: 0.55,
       ),
       itemCount: 10,
       itemBuilder: (ctx, i) => GestureDetector(
@@ -51,7 +50,7 @@ class GridList extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.symmetric(
                             vertical: 2.0, horizontal: 4),
-                        child: Text(
+                        child: const Text(
                           'Rs 200',
                           style: TextStyle(
                             fontWeight: FontWeight.w700,
@@ -69,8 +68,8 @@ class GridList extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 3),
-              Text(
+              const SizedBox(height: 3),
+              const Text(
                 'Rich Dad Poor Dad hjvash',
                 softWrap: true,
                 maxLines: 2,

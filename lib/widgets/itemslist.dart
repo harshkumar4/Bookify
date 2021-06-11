@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:bookify_try/screens/detailscreen.dart';
+import 'package:bookify/screens/detailscreen.dart';
 
 class ItemsListWid extends StatelessWidget {
   @override

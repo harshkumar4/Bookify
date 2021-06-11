@@ -1,4 +1,5 @@
-import 'package:bookify_try/widgets/gridList.dart';
+import 'package:bookify/sizeconfig.dart';
+import 'package:bookify/widgets/gridList.dart';
 import 'package:flutter/material.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -11,13 +12,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      padding: EdgeInsets.only(left: 20),
+      padding: const EdgeInsets.only(left: 20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           const SizedBox(height: 6),
-          Text(
+          const Text(
             'Profile',
             style: TextStyle(
               color: Colors.white,
@@ -32,7 +33,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 Stack(
                   children: [
                     Container(
-                      padding: EdgeInsets.all(1),
+                      padding: const EdgeInsets.all(1),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8),
                         color: Colors.red,
@@ -62,13 +63,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 20,
                 ),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
+                    const Text(
                       'Swati',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
@@ -76,15 +77,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         fontSize: 24,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 4,
                     ),
-                    Text(
+                    const Text(
                       'swatinpp32@gmail.com',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Color(0xFFC4C4C4),
-                        fontSize: 18,
+                        fontSize: 17,
                       ),
                     ),
                   ],
@@ -110,7 +111,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       fontSize: 20),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 100,
               ),
               InkWell(
@@ -130,16 +131,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ],
           ),
           Row(
-            //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Container(
-                  width: 190,
+                  width: getRelativeWidht(0.46),
                   child: Divider(
                     color: tab == 'posted' ? Color(0xFFFFFF00) : Colors.white,
                     thickness: tab == 'posted' ? 4 : 2,
                   )),
               Container(
-                  width: 190,
+                  width: getRelativeWidht(0.46),
                   child: Divider(
                     color: tab == 'posted' ? Colors.white : Color(0xFFFFFF00),
                     thickness: tab == 'posted' ? 2 : 4,

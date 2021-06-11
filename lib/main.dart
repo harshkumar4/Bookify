@@ -1,19 +1,18 @@
-import 'package:bookify_try/screens/Home/carouselscreen.dart';
-import 'package:bookify_try/screens/chatscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 
 import './sizeconfig.dart';
 
-import './screens/addimage.dart';
+import './screens/Auth/signup.dart';
+import './screens/Home/carouselscreen.dart';
+import './screens/chatscreen.dart';
 import './screens/codscreen.dart';
 import './screens/detailscreen.dart';
 import './screens/usedbooksdetail.dart';
 import './screens/morescreen.dart';
 import './screens/screencontroller.dart';
-import 'screens/Auth/signup.dart';
-import 'screens/Auth/login.dart';
+import './screens/Auth/login.dart';
 
 void main() {
   runApp(MyApp());
@@ -53,6 +52,7 @@ class MyApp extends StatelessWidget {
       routes: {
         ScreenController().routeName: (context) => ScreenController(),
         CarouselScreen().routeName: (context) => CarouselScreen(),
+        SignUpScreen().routeName: (context) => SignUpScreen(),
         LoginScreen().routeName: (context) => LoginScreen(),
         MoreScreen().routeName: (context) => MoreScreen(),
         DetailScreen().routeName: (context) => DetailScreen(),

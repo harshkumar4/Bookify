@@ -1,8 +1,6 @@
-import 'package:bookify_try/widgets/buttons.dart';
-import 'package:bookify_try/widgets/inputfield.dart';
+import 'package:bookify/widgets/buttons.dart';
+import 'package:bookify/widgets/inputfield.dart';
 import 'package:flutter/material.dart';
-
-import '../sizeconfig.dart';
 
 class CodScreen extends StatelessWidget {
   final routeName = 'cod-screen';

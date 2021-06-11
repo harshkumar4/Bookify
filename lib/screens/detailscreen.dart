@@ -1,4 +1,4 @@
-import 'package:bookify_try/widgets/buttons.dart';
+import 'package:bookify/widgets/buttons.dart';
 import 'package:flutter/material.dart';
 
 import '../sizeconfig.dart';
@@ -59,7 +59,7 @@ class DetailScreen extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
-                          Text(
+                          const Text(
                             'Rich Dad Poor Dad',
                             softWrap: true,
                             maxLines: 2,
@@ -70,7 +70,7 @@ class DetailScreen extends StatelessWidget {
                               fontSize: 24,
                             ),
                           ),
-                          Text(
+                          const Text(
                             'Robert Kiyosaki',
                             softWrap: true,
                             maxLines: 1,
@@ -109,7 +109,7 @@ class DetailScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              Text(
+              const Text(
                 'About : -',
                 style: const TextStyle(
                   letterSpacing: 0.8,
@@ -118,8 +118,8 @@ class DetailScreen extends StatelessWidget {
                   color: Colors.white,
                 ),
               ),
-              SizedBox(height: 8),
-              Text(
+              const SizedBox(height: 8),
+              const Text(
                 'Rich Dad Poor Dad is a 1997 book written by Robert Kiyosaki and Sharon Lechter. It advocates the importance of financial literacy, financial independence and building wealth through investing in assets, real estate investing, starting and owning businesses, as well as increasing one\'s financial intelligence.',
                 style: const TextStyle(
                   fontSize: 16,
@@ -136,7 +136,7 @@ class DetailScreen extends StatelessWidget {
             vertical: 8,
           ),
           child: CustomElevatedButton(
-              child: Text(
+              child: const Text(
                 'Buy Now',
                 style: const TextStyle(
                   letterSpacing: 1,

@@ -1,4 +1,4 @@
-import 'package:bookify_try/screens/chatscreen.dart';
+import 'package:bookify/screens/chatscreen.dart';
 import 'package:flutter/material.dart';
 
 class Chats extends StatelessWidget {

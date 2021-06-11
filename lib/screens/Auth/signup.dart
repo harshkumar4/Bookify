@@ -1,13 +1,14 @@
-import 'package:bookify_try/widgets/buttons.dart';
+import 'package:bookify/widgets/buttons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import '../../sizeconfig.dart';
 
 import '../../widgets/inputfield.dart';
-import 'package:bookify_try/screens/Auth/login.dart';
+import 'package:bookify/screens/Auth/login.dart';
 
 class SignUpScreen extends StatelessWidget {
+  final routeName = '/signup-screen';
   @override
   Widget build(BuildContext context) {
     return SafeArea(

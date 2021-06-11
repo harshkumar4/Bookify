@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'Home/buyscreen.dart';
 import 'Home/profilescreen.dart';
 import 'Home/chathomescreen.dart';
-import 'Home/sellscreen.dart';
 import 'Home/homescreen.dart';
 
 import '../widgets/scaffold/navbar.dart';
@@ -22,7 +21,6 @@ class _ScreenControllerState extends State<ScreenController> {
   final List<Widget> screens = [
     HomeScreen(),
     BuyUsedScreen(),
-    SellScreen(),
     ChatHomeScreen(),
     ProfileScreen(),
   ];

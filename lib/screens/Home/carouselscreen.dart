@@ -1,14 +1,15 @@
 import 'dart:async';
-import 'package:bookify_try/screens/screencontroller.dart';
+
 import 'package:flutter/material.dart';
 
-import 'package:bookify_try/screens/Auth/login.dart';
-import 'package:bookify_try/screens/Auth/signup.dart';
+import 'package:bookify/screens/Auth/login.dart';
+import 'package:bookify/screens/Auth/signup.dart';
 
-import 'package:bookify_try/widgets/buttons.dart';
-import 'package:bookify_try/models/slide.dart';
-import 'package:bookify_try/widgets/slide_dots.dart';
-import 'package:bookify_try/widgets/slide_item.dart';
+import 'package:bookify/models/slide.dart';
+
+import 'package:bookify/widgets/buttons.dart';
+import 'package:bookify/widgets/slide_dots.dart';
+import 'package:bookify/widgets/slide_item.dart';
 
 class CarouselScreen extends StatefulWidget {
   final routeName = '/carousel';
@@ -92,14 +93,14 @@ class CarouselScreenState extends State<CarouselScreen> {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: <Widget>[
                   CustomElevatedButton(
-                    child: Text(
+                    child: const Text(
                       'Log In',
                       style: const TextStyle(
                         letterSpacing: 1,
@@ -108,14 +109,12 @@ class CarouselScreenState extends State<CarouselScreen> {
                       ),
                     ),
                     onPressedFunction: () {
-                      Navigator.of(context)
-                          .pushNamed(ScreenController().routeName);
+                      Navigator.of(context).pushNamed(LoginScreen().routeName);
                     },
                   ),
-                  SizedBox(height: 8),
-                  FlatButton(
-                    color: Colors.black,
-                    child: Text(
+                  const SizedBox(height: 8),
+                  TextButton(
+                    child: const Text(
                       'Sign Up',
                       style: const TextStyle(
                         color: Color(0xFFFFFF00),
@@ -125,42 +124,9 @@ class CarouselScreenState extends State<CarouselScreen> {
                       ),
                     ),
                     onPressed: () {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (ctx) => SignUpScreen(),
-                        ),
-                      );
+                      Navigator.of(context).pushNamed(SignUpScreen().routeName);
                     },
                   ),
-                  // Row(
-                  //   mainAxisAlignment: MainAxisAlignment.center,
-                  //   children: <Widget>[
-                  //     // Text(
-                  //     //   'Have an account?',
-                  //     //   style: TextStyle(
-                  //     //     color: Colors.white,
-                  //     //     fontSize: 18,
-                  //     //   ),
-                  //     // ),
-                  //     CustomElevatedButton(
-                  //       child: Text(
-                  //         'Login',
-                  //         style: const TextStyle(
-                  //           letterSpacing: 1,
-                  //           fontSize: 18,
-                  //           fontWeight: FontWeight.w700,
-                  //         ),
-                  //       ),
-                  //       onPressedFunction: () {
-                  //         Navigator.of(context).pushReplacement(
-                  //           MaterialPageRoute(
-                  //             builder: (ctx) => LoginScreen(),
-                  //           ),
-                  //         );
-                  //       },
-                  //     ),
-                  //   ],
-                  // ),
                 ],
               )
             ],

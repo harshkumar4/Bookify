@@ -14,18 +14,21 @@ class Slide {
 
 final slideList = [
   Slide(
+    imageUrl: 'assets/delivery.png',
+    title: 'It\'s Just the Beginning',
+    description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dapibus tincidunt bibendum. Maecenas eu viverra orci. Duis diam leo, porta at justo vitae, euismod aliquam nulla.',
+  ),
+  Slide(
     imageUrl: 'assets/bookreader.png',
     title: 'A Cool Way to Get Start',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dapibus tincidunt bibendum. Maecenas eu viverra orci. Duis diam leo, porta at justo vitae, euismod aliquam nulla.',
+    description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dapibus tincidunt bibendum. Maecenas eu viverra orci. Duis diam leo, porta at justo vitae, euismod aliquam nulla.',
   ),
   Slide(
     imageUrl: 'assets/earn.png',
     title: 'Design Interactive App UI',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dapibus tincidunt bibendum. Maecenas eu viverra orci. Duis diam leo, porta at justo vitae, euismod aliquam nulla.',
-  ),
-  Slide(
-    imageUrl: 'assets/delivery.png',
-    title: 'It\'s Just the Beginning',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dapibus tincidunt bibendum. Maecenas eu viverra orci. Duis diam leo, porta at justo vitae, euismod aliquam nulla.',
+    description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dapibus tincidunt bibendum. Maecenas eu viverra orci. Duis diam leo, porta at justo vitae, euismod aliquam nulla.',
   ),
 ];
