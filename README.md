@@ -4,17 +4,17 @@ A new Flutter project.
 
 ## Getting Started
 
-<img src="Screenshots/splashscreen.png?raw=true" width="32%">
-<img src="Screenshots/carousel.png?raw=true" width="32%">
-<img src="Screenshots/login.png?raw=true" width="32%">
-<img src="Screenshots/signup.png?raw=true" width="32%">
-<img src="Screenshots/home.png?raw=true" width="32%">
-<img src="Screenshots/more.png?raw=true" width="32%">
-<img src="Screenshots/detail2.png?raw=true" width="32%">
-<img src="Screenshots/cod.png?raw=true" width="32%">
-<img src="Screenshots/drawer.png?raw=true" width="32%">
-<img src="Screenshots/buy.png?raw=true" width="32%">
-<img src="Screenshots/detail.png?raw=true" width="32%">
-<img src="Screenshots/chathome.png?raw=true" width="32%">
-<img src="Screenshots/chat.png?raw=true" width="32%">
-<img src="Screenshots/profile.png?raw=true" width="32%">
+<img src="ScreenShots/buy.jpg?raw=true" width="32%"> <img 
+src="ScreenShots/carousel.jpg?raw=true" width="32%">
+<img src="ScreenShots/login.jpg?raw=true" width="32%">
+<img src="ScreenShots/signup.jpg?raw=true" width="32%">
+<img src="ScreenShots/home.jpg?raw=true" width="32%">
+<img src="ScreenShots/more.jpg?raw=true" width="32%">
+<img src="ScreenShots/detail2.jpg?raw=true" width="32%">
+<img src="ScreenShots/cod.jpg?raw=true" width="32%">
+<img src="ScreenShots/drawer.jpg?raw=true" width="32%">
+<img src="ScreenShots/buy.jpg?raw=true" width="32%">
+<img src="ScreenShots/detail.jpg?raw=true" width="32%">
+<img src="ScreenShots/chathome.jpg?raw=true" width="32%">
+<img src="ScreenShots/chat.jpg?raw=true" width="32%">
+<img src="ScreenShots/profile.jpg?raw=true" width="32%">
